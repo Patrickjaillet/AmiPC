@@ -1,0 +1,7 @@
+config BR2_PACKAGE_AMIPC_INIT
+	bool "amipc-init"
+	depends on BR2_PACKAGE_RETROARCH
+	help
+	  Scripts de demarrage et de supervision d'AmiPC :
+	  lancement automatique du frontend AttractMode et
+	  bascule vers l'emulateur PUAE (libretro-uae).

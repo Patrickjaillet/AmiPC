@@ -1,0 +1,2 @@
+source "$BR2_EXTERNAL_AMIPC_PATH/package/amipc-init/Config.in"
+source "$BR2_EXTERNAL_AMIPC_PATH/package/attractmode/Config.in"

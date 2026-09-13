@@ -1,0 +1,40 @@
+{
+    "composants": [
+        {
+            "nom": "PUAE",
+            "role": "Moteur d'émulation Amiga",
+            "licence": "GPL-2.0",
+            "site": "https://github.com/libretro/libretro-uae"
+        },
+        {
+            "nom": "libretro-uae",
+            "role": "Portage libretro du core PUAE",
+            "licence": "GPL-2.0",
+            "site": "https://github.com/libretro/libretro-uae"
+        },
+        {
+            "nom": "RetroArch",
+            "role": "Conteneur d'exécution des cores libretro",
+            "licence": "GPL-3.0",
+            "site": "https://github.com/libretro/RetroArch"
+        },
+        {
+            "nom": "AttractMode",
+            "role": "Frontend de sélection des jeux",
+            "licence": "GPL-3.0",
+            "site": "https://github.com/mickelson/attract"
+        },
+        {
+            "nom": "Buildroot",
+            "role": "Génération du système Linux embarqué",
+            "licence": "Diverses (voir composants)",
+            "site": "https://buildroot.org"
+        },
+        {
+            "nom": "SDL2",
+            "role": "Bibliothèque vidéo/audio/entrées bas niveau",
+            "licence": "Zlib",
+            "site": "https://www.libsdl.org"
+        }
+    ]
+}

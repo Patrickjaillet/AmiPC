@@ -1,0 +1,6 @@
+puae_model = "A500"
+puae_kickstart = "kick34005.A500"
+puae_chipset = "OCS/ECS-A500"
+puae_chipmem_size = "1"
+puae_fastmem_size = "0"
+puae_floppy_speed = "100"

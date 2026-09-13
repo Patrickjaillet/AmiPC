@@ -1,0 +1,31 @@
+{
+    "a_propos": {
+        "titre": "À propos d'AmiPC",
+        "nom_logiciel": "AmiPC",
+        "libelle_version": "Version",
+        "libelle_copyright": "Copyright © 2026 Patrick JAILLET — Tous droits réservés",
+        "libelle_email": "E-mail",
+        "libelle_site_web": "Site web",
+        "titre_credits": "Composants tiers",
+        "retour": "Retour"
+    },
+    "menu": {
+        "amiga_500": "Amiga 500",
+        "amiga_1200": "Amiga 1200",
+        "parametres": "Paramètres",
+        "a_propos": "À propos",
+        "quitter": "Quitter"
+    },
+    "parametres": {
+        "langue": "Langue",
+        "luminosite": "Luminosité",
+        "reseau_wifi": "Réseau Wi-Fi",
+        "filtre_video": "Filtre vidéo",
+        "oui": "Oui",
+        "non": "Non"
+    },
+    "bios_avertissement": {
+        "titre": "BIOS Amiga manquant ou invalide",
+        "message": "Un ou plusieurs fichiers BIOS/Kickstart sont absents ou de taille incorrecte. Certains jeux peuvent ne pas fonctionner. Consultez /data/amipc-bios-etat.txt pour le détail."
+    }
+}

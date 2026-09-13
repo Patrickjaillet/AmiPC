@@ -1,0 +1,17 @@
+name: Vérification de conformité
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  verifier-mentions-ia:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupération du dépôt
+        uses: actions/checkout@v4
+
+      - name: Vérification de l'absence de mention d'IA générative
+        run: sh scripts/verifier_mentions_ia.sh

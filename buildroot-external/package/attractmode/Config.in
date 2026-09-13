@@ -1,0 +1,15 @@
+config BR2_PACKAGE_ATTRACTMODE
+	bool "attractmode"
+	depends on BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_IMAGE
+	select BR2_PACKAGE_SDL2_TTF
+	select BR2_PACKAGE_LIBVLC if BR2_PACKAGE_LIBVLC_AVAILABLE
+	select BR2_PACKAGE_FONTCONFIG
+	select BR2_PACKAGE_ZLIB
+	select BR2_PACKAGE_JPEG
+	help
+	  AttractMode est un frontend graphique multi-plateforme pour
+	  systemes d'emulation, utilise par AmiPC comme interface de
+	  selection des jeux Amiga.
+
+	  https://github.com/mickelson/attract

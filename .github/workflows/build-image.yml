@@ -1,0 +1,30 @@
+name: Construction de l'image AmiPC
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupération du dépôt
+        uses: actions/checkout@v4
+
+      - name: Installation des dépendances Buildroot
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential git curl unzip rsync bc \
+            libncurses-dev python3 cpio file wget
+
+      - name: Compilation de l'image AmiPC
+        run: sh scripts/construire_image.sh
+
+      - name: Archivage de l'image générée
+        uses: actions/upload-artifact@v4
+        with:
+          name: amipc-image
+          path: build/buildroot-*/output/images/amipc.img
+          retention-days: 30

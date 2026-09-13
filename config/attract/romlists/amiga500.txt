@@ -1,0 +1,142 @@
+#Name;Title;Emulator;CloneOf;Year;Manufacturer;Category;Players;Rotation;Control;Status;DisplayCount;DisplayType;AltRomname;AltTitle;Extra;Buttons;Favourite;Tags;PlayedCount;PlayedTime;FileIsAvailable
+Aaargh! (1988)(Melbourne House)[cr HTL];Aaargh!;amiga500;;1988;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Advantage Tennis (1991)(Infogrames)(M3)[cr NMS];Advantage Tennis;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Adventures of Robin Hood, The (1991)(Millennium)(M4)[cr SR];Adventures of Robin Hood, The;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Agony (1992)(Psygnosis);Agony;amiga500;;1992;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Aigle d'Or, L' - Le Retour (1991)(Loriciel)(FR);Aigle d'Or, L' - Le Retour;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Alfred Chicken (1993)(Mindscape)[h QTX];Alfred Chicken;amiga500;;1993;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Alien Breed - Special Edition 92 (1992)(Team 17);Alien Breed - Special Edition 92;amiga500;;1992;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Alien Syndrome (1988)(ACE)[cr BS1 - QRM];Alien Syndrome;amiga500;;1988;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Altered Beast (1989)(Activision);Altered Beast;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Another World (1991)(Delphine)(FR);Another World;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Apidya (1992)(Play Byte);Apidya;amiga500;;1992;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Arkanoid - Revenge of Doh (1988-11-05)(Imagine)[cr Ackerlight];Arkanoid - Revenge of Doh;amiga500;;1988;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Asterix - Le Coup du Menhir (1989)(Coktel Vision)(FR)[cr];Asterix - Le Coup du Menhir;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Asterix chez Rahazade (1987)(Coktel Vision)(FR);Asterix chez Rahazade;amiga500;;1987;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Atomix (1990)(Thalion)[cr VF][t +2 ACME][aka Atomic];Atomix;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Awesome (1990)(Psygnosis);Awesome;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Axel's Magic Hammer (1989)(Gremlin)[cr VF];Axel's Magic Hammer;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+B.A.T. (1990)(Ubi Soft)(FR);B.A.T.;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Back to the Future Part II (1990)(Image Works)[cr Angels][t +3 Darkness];Back to the Future Part II;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Back to the Future Part III (1991)(Image Works);Back to the Future Part III;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Barbarian - The Ultimate Warrior (1988)(Palace)[cr Defjam][t +2 Defjam];Barbarian - The Ultimate Warrior;amiga500;;1988;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Batman - The Caped Crusader (1988)(Ocean)[cr VF - Beyonders][h IDS][t +1 Band];Batman - The Caped Crusader;amiga500;;1988;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Batman - The Movie (1989)(Ocean)(PAL);Batman - The Movie;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Batman Returns (1993)(Gametek);Batman Returns;amiga500;;1993;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Battle Chess (1988)(Interplay)[cr QTX];Battle Chess;amiga500;;1988;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Battle Squadron - The Destruction of the Barrax Empire! (1989)(Innerprise)[cr TIC][t +5 Trilogy];Battle Squadron - The Destruction of the Barrax Empire!;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Battlestorm (1991)(Titus)[cr Angels - Defjam];Battlestorm;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Beach Volley (1989)(Ocean)[cr ACC][t +2 Trilogy];Beach Volley;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Beneath a Steel Sky v1.0 (1994-03-16)(Virgin)(FR);Beneath a Steel Sky v1.0;amiga500;;1994;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Best of the Best - Championship Karate (1992)(Loriciel);Best of the Best - Championship Karate;amiga500;;1992;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Birds of Prey (1991)(Electronic Arts);Birds of Prey;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Black Cauldron, The v2.00 (1987-06-14)(Sierra - Disney)[cr HQC];Black Cauldron, The v2.00;amiga500;;1987;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Blazing Thunder (1991)(Hi-Tec)[cr SR][h Bitrax][t +6 CPY];Blazing Thunder;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Blob (1993)(Core)[cr DCS][t +13 GOD];Blob;amiga500;;1993;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Blood Money (1989)(Psygnosis);Blood Money;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Bloodwych (1989)(Image Works)[cr QTX];Bloodwych;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Bomb Jack (1988)(Elite)[cr DF][h Champs];Bomb Jack;amiga500;;1988;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Brutal Football (1993)(Millennium);Brutal Football;amiga500;;1993;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Cabal (1989)(Ocean)(PAL)[cr Flashtro][t +9 Flashtro];Cabal;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Cadaver v0.01 (1990-09-12)(Image Works)(PAL)(M3);Cadaver v0.01;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Cannon Fodder (1993)(Virgin);Cannon Fodder;amiga500;;1993;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Cannon Fodder 2 (1994)(Virgin);Cannon Fodder 2;amiga500;;1994;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Castlevania (1990)(Konami)[cr QTX][t +4 LSD];Castlevania;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Chambers of Shaolin (1989)(Grandslam)[cr QTX];Chambers of Shaolin;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Chaos Engine 2, The (1996)(Renegade);Chaos Engine 2, The;amiga500;;1996;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Chaos Engine, The (1993)(Renegade);Chaos Engine, The;amiga500;;1993;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Chrono Quest II (1990)(Psygnosis);Chrono Quest II;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Chuck Rock (1991)(Core);Chuck Rock;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Chuck Rock 2 - Son of Chuck (1993)(Core)(beta);Chuck Rock 2 - Son of Chuck;amiga500;;1993;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Creatures (1993-02-08)(Thalamus);Creatures;amiga500;;1993;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Croisiere pour un Cadavre (1991)(Delphine)(FR);Croisiere pour un Cadavre;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Crystal Hammer v1 (1987)(reLINE);Crystal Hammer v1;amiga500;;1987;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Curse of Enchantia (1992)(Core);Curse of Enchantia;amiga500;;1992;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Dark Seed v1.0 (1993)(Cyberdreams)(FR);Dark Seed v1.0;amiga500;;1993;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Defender II (1990)(ARC)[h Mayhem];Defender II;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Defender of the Crown (1986)(Cinemaware)(US);Defender of the Crown;amiga500;;1986;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Disc (1991)(Loriciel)[cr CPY];Disc;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Dogs of War (1989)(Elite)[cr QTX];Dogs of War;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Double Dragon (1989)(Melbourne House)[cr Defjam - CCS];Double Dragon;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Double Dragon 3 - The Rosetta Stone (1991)(Storm);Double Dragon 3 - The Rosetta Stone;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Double Dragon II - The Revenge v3.84 (1989)(Virgin Mastertronic)[cr OCL][t +2 OCL];Double Dragon II - The Revenge v3.84;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Dragon Spirit (1989)(Tengen - Domark)[cr QTX];Dragon Spirit;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+DreamWeb (1994)(Empire);DreamWeb;amiga500;;1994;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Dune (1992)(Virgin)(FR);Dune;amiga500;;1992;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+E-Motion (1990)(U.S. Gold)[cr QTX];E-Motion;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Emmanuelle (1989)(Tomahawk)(FR)[cr Ackerlight];Emmanuelle;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Escape from the Planet of the Robot Monsters (1990)(Tengen - Domark)(PAL)[cr OCL];Escape from the Planet of the Robot Monsters;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Explora - Time Run (1988)(16-32 Diffusion)(FR);Explora - Time Run;amiga500;;1988;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Explora II - 1632 Edition (1988)(16-32 Diffusion)(FR);Explora II - 1632 Edition;amiga500;;1988;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Explora III - Sous le Signe du Serpent (1990)(16-32 Diffusion)(FR);Explora III - Sous le Signe du Serpent;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Fascination v1.1 (1991)(Coktel Vision)(FR);Fascination v1.1;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Fields of Glory (1994)(MicroProse)(M3);Fields of Glory;amiga500;;1994;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Final Fight (1991)(U.S. Gold);Final Fight;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+First Samurai, The (1991)(Image Works);First Samurai, The;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Flashback (1993)(Delphine - U.S. Gold)(FR);Flashback;amiga500;;1993;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Fury of the Furries (1993)(Kalisto - Mindscape)(M5);Fury of the Furries;amiga500;;1993;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Gauntlet II (1989)(U.S. Gold)[cr QTX];Gauntlet II;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Geisha (1990)(Coktel Vision)(FR)[cr Angels - Defjam];Geisha;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Ghosts 'N Goblins v3 (1990)(Elite)[cr Defjam - CCS - ACC];Ghosts 'N Goblins v3;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Ghouls 'N Ghosts (1989)(U.S. Gold);Ghouls 'N Ghosts;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Gobliiins v1.1 (1991)(Coktel Vision)(M5);Gobliiins v1.1;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Gobliins 2 - The Prince Buffoon v1.02 (1992)(Coktel Vision)(FR);Gobliins 2 - The Prince Buffoon v1.02;amiga500;;1992;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Goblins 3 v1.00 (1993)(Coktel Vision)(FR);Goblins 3 v1.00;amiga500;;1993;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Gods v1.00 (1991-03-28)(Renegade);Gods v1.00;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Golden Axe (1990)(Virgin)[cr Genesis - Angels - Defjam][h Decay][t +3 SR];Golden Axe;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Great Courts (1989)(Ubi Soft)[cr QTX];Great Courts;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Great Courts 2 (1991)(Ubi Soft)[cr QTX];Great Courts 2;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Hammer Boy (1990)(Dinamic)[cr SKN];Hammer Boy;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Hammerfist (1990)(Activision)[cr PNA][t +2 PNA];Hammerfist;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Hard Drivin' (1990)(Tengen - Domark)[cr QTX];Hard Drivin';amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Hard Drivin' II - Drive Harder (1991)(Tengen - Domark)[cr HZ];Hard Drivin' II - Drive Harder;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Heimdall (1991)(Core);Heimdall;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Heimdall 2 - Into the Hall of Worlds (1994)(Core)(M4);Heimdall 2 - Into the Hall of Worlds;amiga500;;1994;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Indiana Jones and the Fate of Atlantis - The Graphic Adventure v1.0 (1993-03-02)(LucasArts)(FR);Indiana Jones and the Fate of Atlantis - The Graphic Adventure v1.0;amiga500;;1993;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Indiana Jones and the Last Crusade - The Graphic Adventure v1.4 (1989-10-06)(Lucasfilm)(FR);Indiana Jones and the Last Crusade - The Graphic Adventure v1.4;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Ishar - Legend of the Fortress (1992)(Silmarils)(FR);Ishar - Legend of the Fortress;amiga500;;1992;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Ishar 2 - Messengers of Doom (1993)(Silmarils)(FR);Ishar 2 - Messengers of Doom;amiga500;;1993;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+It Came from the Desert (1989)(Cinemaware);It Came from the Desert;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Ivanhoe (1990)(Ocean)[cr PDX][t +10 RSi];Ivanhoe;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+James Pond - Underwater Agent (1990)(Millennium)[cr PDX][t +16 SSP];James Pond - Underwater Agent;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+James Pond 2 - Codename RoboCod (1991)(Millennium)[cr SR][t +5 Ache - Extensors];James Pond 2 - Codename RoboCod;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Judge Dredd (1990)(Virgin Mastertronic)[cr AGL][h SB-Soft][t +3 AGL];Judge Dredd;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Kick Off (1989)(Anco)(PAL)(M5)[cr VF][h TFS];Kick Off;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Kick Off 2 (1990)(Anco)[cr PNA];Kick Off 2;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Killing Game Show, The (1990)(Psygnosis);Killing Game Show, The;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+King of the Barbarians (1989)(ECP)(AU)[f ross][t +3 ross];King of the Barbarians;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+King's Quest - Quest for the Crown v1.0U (1987)(Sierra)[h Power Lords];King's Quest - Quest for the Crown v1.0U;amiga500;;1987;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+King's Quest I - Quest for the Crown v1.000.054 (1991)(Sierra);King's Quest I - Quest for the Crown v1.000.054;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+King's Quest II - Romancing the Throne v2.0J (1988)(Sierra);King's Quest II - Romancing the Throne v2.0J;amiga500;;1988;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+King's Quest III - To Heir is Human v1.01 (1989)(Sierra);King's Quest III - To Heir is Human v1.01;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+King's Quest IV - The Perils of Rosella v1.023 (1990-05-30)(Sierra);King's Quest IV - The Perils of Rosella v1.023;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+King's Quest V - Absence Makes the Heart Go Yonder v1.000.000 (1991)(Sierra);King's Quest V - Absence Makes the Heart Go Yonder v1.000.000;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+King's Quest VI - Heir Today, Gone Tomorrow (1994)(Sierra)(FR);King's Quest VI - Heir Today, Gone Tomorrow;amiga500;;1994;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Krypton Egg (1990)(HitSoft)[cr QTX][t +2 MAD];Krypton Egg;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Kult - The Temple of Flying Saucers (1989)(Exxos)(M3)[cr QTX][h SGT];Kult - The Temple of Flying Saucers;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+LED Storm - Lazer Enhanced Destruction (1988)(GO!)[cr FLT - NS][t +1 FLT - NS];LED Storm - Lazer Enhanced Destruction;amiga500;;1988;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Last Ninja 2 - Back With a Vengeance (1990)(System 3)[cr PDX][t +3 Adept];Last Ninja 2 - Back With a Vengeance;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Last Ninja 3 (1991-09-19)(System 3);Last Ninja 3;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Leander (1991)(Psygnosis);Leander;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Legend of Kyrandia, The - Book One (1992)(Virgin)(FR);Legend of Kyrandia, The - Book One;amiga500;;1992;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Log!cal (1991)(Rainbow Arts)[cr TRSI][t +4 TRSI];Log!cal;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Loom v1.2 (1990-06-26)(Lucasfilm)(FR);Loom v1.2;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Lost Vikings, The (1993-05-11)(Interplay)(FR);Lost Vikings, The;amiga500;;1993;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Lotus Esprit Turbo Challenge (1990)(Gremlin)[cr Angels][f Full-Evil][t +1 Full-Evil];Lotus Esprit Turbo Challenge;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Lotus III - The Ultimate Challenge (1992)(Gremlin);Lotus III - The Ultimate Challenge;amiga500;;1992;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Lotus Turbo Challenge 2 (1991)(Gremlin)[cr CPY][t +4 Goonies];Lotus Turbo Challenge 2;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Lure of the Temptress (1992-06-18)(Virgin)(FR);Lure of the Temptress;amiga500;;1992;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Maniac Mansion (1989)(Lucasfilm)(FR);Maniac Mansion;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Manoir de Mortvielle, Le (1988)(Lankhor)(FR)[cr Thrust];Manoir de Mortvielle, Le;amiga500;;1988;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Maupiti Island (1990-07)(Lankhor)(FR);Maupiti Island;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Monkey Island 2 - LeChuck's Revenge v1.0 (1992-12-07)(LucasArts - Ubi Soft)(FR);Monkey Island 2 - LeChuck's Revenge v1.0;amiga500;;1992;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Moonstone - A Hard Days Knight (1991)(Mindscape);Moonstone - A Hard Days Knight;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Nitro (1990)(Psygnosis);Nitro;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+North & South (1989)(Infogrames)(M5)[cr QTX];North & South;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Oh No! More Lemmings (1991)(Psygnosis)[cr FLT][f FLT][t +44 Shining];Oh No! More Lemmings;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Onslaught (1989)(Hewson)[cr Flashtro][t +3 Flashtro];Onslaught;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Operation Stealth v3.7 (1990)(Delphine)(FR);Operation Stealth v3.7;amiga500;;1990;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Out Run (1988)(U.S. Gold)[cr Defjam - CCS][t +4 Defjam];Out Run;amiga500;;1988;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Out Run Europa (1991)(U.S. Gold);Out Run Europa;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Outlands (1989)(Pandora)[cr SCX];Outlands;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Outzone (1991)(Lankhor)[cr SR][t +3 Supplex];Outzone;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1

@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="block", ENV{ID_FS_USAGE}=="filesystem", ENV{DEVTYPE}=="partition", RUN+="/usr/bin/amipc-usb-mount.sh add %k"
+ACTION=="remove", SUBSYSTEM=="block", ENV{DEVTYPE}=="partition", RUN+="/usr/bin/amipc-usb-mount.sh remove %k"
