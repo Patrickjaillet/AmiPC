@@ -6,6 +6,13 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.9.1] - 2026-09-13
+
+### Corrigé
+
+- Script `scripts/verifier_mentions_ia.sh` : le motif de recherche incluait l'expression générique « IA générative », se déclenchant sur son propre nom de job dans `verifier-conformite.yml` (faux positif détecté lors du premier déclenchement CI). Le motif est resserré aux seules mentions d'outils/fournisseurs concrets (Claude, Anthropic, ChatGPT, OpenAI, Copilot, GPT-N), rendant le contrôle robuste sans liste d'exclusions à maintenir au coup par coup.
+- Environnement GitHub Pages : ajout d'une règle de déploiement autorisant les tags `v*`, la politique de branche par défaut bloquant tout déploiement du site.
+
 ## [0.9.0] - 2026-09-13
 
 ### Ajouté
