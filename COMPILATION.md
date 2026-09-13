@@ -18,7 +18,8 @@ La compilation repose sur **Buildroot** et doit obligatoirement s'exécuter sous
 ```sh
 sudo apt-get update
 sudo apt-get install -y build-essential git curl unzip rsync bc \
-    libncurses-dev python3 cpio file wget
+    libncurses-dev python3 cpio file wget libelf-dev flex bison \
+    libssl-dev
 ```
 
 ---

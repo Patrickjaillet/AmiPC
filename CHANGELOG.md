@@ -18,6 +18,7 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 - Workflow `publier-site.yml` : ciblait un identifiant `#version` obsolète depuis la refonte du site, ne mettant plus à jour le numéro de version affiché. Corrigé pour cibler les nouveaux identifiants `#version-affichee` et `#version-footer`.
 - Script `scripts/verifier_mentions_ia.sh` : nouveaux faux positifs sur `.claude/` (nom de l'environnement de développement local, sans rapport avec une mention publique) et `.gitignore` (qui référence ce même nom de répertoire à exclure) ; ajout aux exclusions du scan.
+- Dépendances système de compilation (`build-image.yml`, `publier-release.yml`, `COMPILATION.md`) : le premier build réel en CI (tag v0.9.0) a échoué à la compilation du noyau Linux avec `fatal error: libelf.h / gelf.h: No such file or directory` (`tools/objtool` du noyau nécessite `libelf-dev`). Ajout de `libelf-dev`, `flex`, `bison` et `libssl-dev` à la liste des paquets requis, absents jusqu'ici bien que documentés comme nécessaires à un build noyau complet.
 
 ## [0.9.1] - 2026-09-13
 
