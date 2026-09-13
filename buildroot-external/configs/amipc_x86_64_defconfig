@@ -59,11 +59,12 @@ BR2_PACKAGE_LIBRETRO_UAE=y
 
 # Frontend AttractMode (paquet local, cf. package/attractmode)
 BR2_PACKAGE_ATTRACTMODE=y
-BR2_PACKAGE_SDL2_IMAGE=y
-BR2_PACKAGE_SDL2_TTF=y
+BR2_PACKAGE_SFML=y
 BR2_PACKAGE_FONTCONFIG=y
 BR2_PACKAGE_JPEG=y
 BR2_PACKAGE_ZLIB=y
+BR2_PACKAGE_EXPAT=y
+BR2_PACKAGE_FREETYPE=y
 BR2_PACKAGE_LIBVLC=y
 
 # Superviseur de demarrage AmiPC (paquet local, cf. package/amipc-init)

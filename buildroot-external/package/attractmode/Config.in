@@ -1,12 +1,15 @@
 config BR2_PACKAGE_ATTRACTMODE
 	bool "attractmode"
 	depends on BR2_PACKAGE_SDL2
-	select BR2_PACKAGE_SDL2_IMAGE
-	select BR2_PACKAGE_SDL2_TTF
+	depends on BR2_INSTALL_LIBSTDCPP
+	depends on BR2_PACKAGE_HAS_UDEV
+	select BR2_PACKAGE_SFML
 	select BR2_PACKAGE_LIBVLC if BR2_PACKAGE_LIBVLC_AVAILABLE
 	select BR2_PACKAGE_FONTCONFIG
 	select BR2_PACKAGE_ZLIB
 	select BR2_PACKAGE_JPEG
+	select BR2_PACKAGE_EXPAT
+	select BR2_PACKAGE_FREETYPE
 	help
 	  AttractMode est un frontend graphique multi-plateforme pour
 	  systemes d'emulation, utilise par AmiPC comme interface de

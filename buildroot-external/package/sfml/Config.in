@@ -1,0 +1,19 @@
+config BR2_PACKAGE_SFML
+	bool "sfml"
+	depends on BR2_INSTALL_LIBSTDCPP
+	depends on BR2_PACKAGE_HAS_UDEV
+	select BR2_PACKAGE_LIBDRM
+	select BR2_PACKAGE_MESA3D
+	select BR2_PACKAGE_MESA3D_OPENGL_GLX if BR2_PACKAGE_XORG7
+	select BR2_PACKAGE_FLAC
+	select BR2_PACKAGE_LIBVORBIS
+	select BR2_PACKAGE_OPENAL
+	select BR2_PACKAGE_LIBXRANDR if BR2_PACKAGE_XORG7
+	select BR2_PACKAGE_FREETYPE
+	select BR2_PACKAGE_EUDEV
+	help
+	  Simple and Fast Multimedia Library : bibliotheque C++
+	  multiplateforme utilisee par AttractMode (fenetrage, rendu
+	  graphique, audio, entrees).
+
+	  https://www.sfml-dev.org

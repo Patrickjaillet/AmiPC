@@ -6,6 +6,14 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.2] - 2026-09-13
+
+### Corrigé
+
+- Compilation du paquet Buildroot `attractmode` : le noyau compile désormais avec succès (correctif `libelf-dev` précédent validé), mais la compilation d'AttractMode échouait ensuite avec `fatal error: squirrel.h` et `fatal error: SFML/...`. Cause identifiée : SFML (bibliothèque C++ requise pour le fenêtrage, le rendu graphique et l'audio d'AttractMode) n'était déclarée nulle part comme dépendance, provoquant l'échec de détection via `pkg-config` puis la désactivation en cascade d'autres chemins d'inclusion du Makefile amont (dont Squirrel, pourtant fourni en sources dans `extlibs/`).
+- Ajout d'un nouveau paquet Buildroot local `sfml` (`buildroot-external/package/sfml/`), compilé via CMake avec ses dépendances système (eudev, Mesa3D, FLAC, libvorbis, OpenAL, FreeType).
+- `attractmode.mk` : dépendances corrigées (`sfml`, `expat`, `freetype` au lieu de `sdl2_image`/`sdl2_ttf`, non utilisés par le Makefile réel d'AttractMode), et transmission explicite de `PKG_CONFIG_PATH`/`PKG_CONFIG_SYSROOT_DIR` pointant vers le staging Buildroot afin que la détection SFML aboutisse lors de la compilation croisée.
+
 ## [0.10.1] - 2026-09-13
 
 ### Corrigé
