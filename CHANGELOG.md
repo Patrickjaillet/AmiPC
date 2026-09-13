@@ -6,6 +6,12 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.1] - 2026-09-13
+
+### Corrigé
+
+- Site web : le fond animé Three.js du hero restait figé à sa taille de canvas par défaut (300×150), confiné en haut à gauche, car sa taille était mesurée via `clientWidth`/`clientHeight` avant que la mise en page (polices, hauteur du hero) ne soit stabilisée. Le rendu se dimensionne désormais sur `.hero` via `getBoundingClientRect`, se remesure au chargement complet, après le chargement des polices, et en continu via `ResizeObserver`.
+
 ## [0.10.0] - 2026-09-13
 
 ### Ajouté

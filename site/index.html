@@ -114,6 +114,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-
     inset: 0;
     z-index: 0;
     opacity: 0.85;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .hero-contenu {
@@ -554,7 +557,7 @@ footer {
             <a class="bouton bouton-primaire" href="https://github.com/Patrickjaillet/AmiPC/releases/latest">Télécharger la dernière image</a>
             <a class="bouton bouton-secondaire" href="https://github.com/Patrickjaillet/AmiPC">Voir le dépôt source</a>
         </div>
-        <p class="hero-version">Version actuelle : <strong id="version-affichee">0.10.0</strong> · Licence propriétaire, tous droits réservés</p>
+        <p class="hero-version">Version actuelle : <strong id="version-affichee">0.10.1</strong> · Licence propriétaire, tous droits réservés</p>
     </div>
 </header>
 
@@ -736,7 +739,7 @@ footer {
         </div>
         <div class="footer-bas">
             <span>Copyright © 2026 Patrick JAILLET — Tous droits réservés</span>
-            <span>AmiPC v<span id="version-footer">0.10.0</span></span>
+            <span>AmiPC v<span id="version-footer">0.10.1</span></span>
         </div>
     </div>
 </footer>
@@ -751,21 +754,31 @@ footer {
 <script>
 (function () {
     var canvas = document.getElementById('fond-3d');
-    if (!canvas || typeof THREE === 'undefined') return;
+    var hero = document.querySelector('.hero');
+    if (!canvas || !hero || typeof THREE === 'undefined') return;
     var reduitMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    function mesurer() {
+        var rect = hero.getBoundingClientRect();
+        return {
+            largeur: Math.max(1, Math.round(rect.width)),
+            hauteur: Math.max(1, Math.round(rect.height))
+        };
+    }
+
+    var taille = mesurer();
+
     var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera(60, canvas.clientWidth / canvas.clientHeight, 0.1, 2000);
+    var camera = new THREE.PerspectiveCamera(60, taille.largeur / taille.hauteur, 0.1, 2000);
     camera.position.set(0, 60, 220);
 
     var renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
     function redimensionner() {
-        var largeur = canvas.clientWidth;
-        var hauteur = canvas.clientHeight;
-        renderer.setSize(largeur, hauteur, false);
-        camera.aspect = largeur / hauteur;
+        var t = mesurer();
+        renderer.setSize(t.largeur, t.hauteur, false);
+        camera.aspect = t.largeur / t.hauteur;
         camera.updateProjectionMatrix();
     }
 
@@ -790,6 +803,13 @@ footer {
 
     redimensionner();
     window.addEventListener('resize', redimensionner);
+    window.addEventListener('load', redimensionner);
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(redimensionner);
+    }
+    if (window.ResizeObserver) {
+        new ResizeObserver(redimensionner).observe(hero);
+    }
 
     var horloge = new THREE.Clock();
 
