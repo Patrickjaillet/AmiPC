@@ -6,6 +6,14 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.3] - 2026-09-14
+
+### Corrigé
+
+- Compilation du paquet Buildroot `sfml` : le noyau et GRUB2 compilent désormais avec succès (fixes précédents validés), mais la configuration CMake de SFML échouait sur `Could NOT find X11 (missing: X11_X11_INCLUDE_PATH X11_X11_LIB)`. Cause : AmiPC est un système headless KMS/DRM sans serveur Xorg, mais SFML utilise par défaut son backend de fenêtrage X11 sur Linux, qu'aucune option n'écartait explicitement.
+- Activation du backend natif DRM de SFML (`-DSFML_USE_DRM=TRUE`, disponible depuis SFML 2.6), qui s'appuie sur libdrm/GBM/EGL/eudev au lieu de X11 — cohérent avec l'architecture headless du système.
+- Ajout des pilotes Gallium Mesa3D nécessaires à GBM (`IRIS`, `RADEONSI`, `NOUVEAU`, `VIRGL`, `SWRAST`), absents du defconfig bien que requis dès que `MESA3D_OPENGL_EGL` est activé — sans pilote Gallium, le support GBM n'est pas construit malgré l'option activée.
+
 ## [0.10.2] - 2026-09-13
 
 ### Corrigé
