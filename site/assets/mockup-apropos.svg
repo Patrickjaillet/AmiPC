@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+<defs>
+<linearGradient id="bgap" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#0d1220"/>
+<stop offset="1" stop-color="#080b14"/>
+</linearGradient>
+</defs>
+<rect width="1920" height="1080" fill="url(#bgap)"/>
+
+<rect x="260" y="140" width="1400" height="800" rx="10" fill="#0a0e17" opacity="0.92" stroke="#00d4ff" stroke-width="1" stroke-opacity="0.3"/>
+
+<text x="300" y="220" font-family="Space Grotesk, sans-serif" font-size="42" font-weight="700" fill="#00d4ff">A propos d'AmiPC</text>
+
+<text x="300" y="300" font-family="Space Grotesk, sans-serif" font-size="30" fill="#e9eef5">AmiPC - Version 0.9.1</text>
+
+<text x="300" y="360" font-family="Inter, sans-serif" font-size="22" fill="#e9eef5">Copyright (c) 2026 Patrick JAILLET - Tous droits reserves</text>
+
+<text x="300" y="420" font-family="JetBrains Mono, monospace" font-size="20" fill="#7c889e">E-mail : sandefjord.development@proton.me</text>
+<text x="300" y="460" font-family="JetBrains Mono, monospace" font-size="20" fill="#7c889e">Site web : https://patrickjaillet.github.io/AmiPC</text>
+
+<text x="300" y="540" font-family="Space Grotesk, sans-serif" font-size="26" fill="#00d4ff">Composants tiers</text>
+
+<g font-family="JetBrains Mono, monospace" font-size="20" fill="#c9d3e3">
+<text x="300" y="590">PUAE / libretro-uae</text>
+<text x="300" y="625">RetroArch</text>
+<text x="300" y="660">AttractMode</text>
+<text x="300" y="695">Buildroot</text>
+<text x="300" y="730">SDL2</text>
+</g>
+
+<rect x="300" y="800" width="200" height="56" rx="4" fill="#00d4ff" opacity="0.15" stroke="#00d4ff" stroke-opacity="0.4"/>
+<text x="400" y="835" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="20" fill="#00d4ff">Retour</text>
+</svg>

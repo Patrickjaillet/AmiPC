@@ -27,7 +27,8 @@ jobs:
       - name: Mise à jour du numéro de version affiché
         run: |
           VERSION="$(cat VERSION | tr -d '[:space:]')"
-          sed -i "s/<span id=\"version\">.*<\/span>/<span id=\"version\">${VERSION}<\/span>/" site/index.html
+          sed -i "s/<span id=\"version-affichee\">.*<\/span>/<span id=\"version-affichee\">${VERSION}<\/span>/" site/index.html
+          sed -i "s/<span id=\"version-footer\">.*<\/span>/<span id=\"version-footer\">${VERSION}<\/span>/" site/index.html
 
       - name: Préparation de l'artefact Pages
         uses: actions/upload-pages-artifact@v3

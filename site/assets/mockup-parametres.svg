@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+<defs>
+<linearGradient id="bgpm" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#0d1220"/>
+<stop offset="1" stop-color="#080b14"/>
+</linearGradient>
+</defs>
+<rect width="1920" height="1080" fill="url(#bgpm)"/>
+
+<text x="80" y="120" font-family="Space Grotesk, sans-serif" font-size="46" font-weight="700" fill="#00d4ff">Parametres</text>
+
+<g font-family="Inter, sans-serif" font-size="26">
+<rect x="80" y="200" width="1760" height="90" rx="6" fill="#141c2e"/>
+<text x="120" y="255" fill="#e9eef5">Langue</text>
+<rect x="1500" y="220" width="120" height="50" rx="25" fill="#00d4ff" opacity="0.85"/>
+<text x="1560" y="253" text-anchor="middle" fill="#0a0e17" font-weight="700">FR</text>
+
+<rect x="80" y="310" width="1760" height="90" rx="6" fill="#141c2e"/>
+<text x="120" y="365" fill="#e9eef5">Luminosite</text>
+<rect x="1200" y="335" width="420" height="10" rx="5" fill="#2a3350"/>
+<rect x="1200" y="335" width="340" height="10" rx="5" fill="#00d4ff"/>
+<circle cx="1540" cy="340" r="16" fill="#00d4ff"/>
+<text x="1660" y="365" fill="#7c889e" font-family="JetBrains Mono, monospace">80%</text>
+
+<rect x="80" y="420" width="1760" height="90" rx="6" fill="#141c2e"/>
+<text x="120" y="475" fill="#e9eef5">Reseau Wi-Fi</text>
+<rect x="1500" y="440" width="120" height="50" rx="25" fill="#2a3350"/>
+<circle cx="1530" cy="465" r="20" fill="#7c889e"/>
+
+<rect x="80" y="530" width="1760" height="90" rx="6" fill="#141c2e"/>
+<text x="120" y="585" fill="#e9eef5">Filtre video</text>
+<rect x="1360" y="550" width="260" height="50" rx="6" fill="#ff8a3d" opacity="0.85"/>
+<text x="1490" y="583" text-anchor="middle" fill="#0a0e17" font-weight="700">Pixel Perfect</text>
+</g>
+</svg>

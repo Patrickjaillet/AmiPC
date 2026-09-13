@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+<defs>
+<linearGradient id="bgmenu" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#0d1220"/>
+<stop offset="1" stop-color="#080b14"/>
+</linearGradient>
+<linearGradient id="snapfake" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#1c2a44"/>
+<stop offset="0.5" stop-color="#0f1830"/>
+<stop offset="1" stop-color="#2a1638"/>
+</linearGradient>
+</defs>
+<rect width="1920" height="1080" fill="url(#bgmenu)"/>
+<text x="80" y="90" font-family="Space Grotesk, sans-serif" font-size="48" font-weight="700" fill="#00d4ff">Agony</text>
+<text x="80" y="1030" font-family="JetBrains Mono, monospace" font-size="24" fill="#7c889e">1992 - Psygnosis</text>
+<text x="1720" y="90" font-family="JetBrains Mono, monospace" font-size="24" fill="#7c889e" text-anchor="end">Tous</text>
+
+<g font-family="Space Grotesk, sans-serif" font-size="30">
+<rect x="64" y="150" width="640" height="56" rx="4" fill="#00d4ff" opacity="0.14"/>
+<text x="96" y="188" fill="#00d4ff" font-weight="700">Agony</text>
+<text x="96" y="244" fill="#c9d3e3">Alien Breed - Special Edition 92</text>
+<text x="96" y="300" fill="#c9d3e3">Another World</text>
+<text x="96" y="356" fill="#c9d3e3">Apidya</text>
+<text x="96" y="412" fill="#c9d3e3">Awesome</text>
+<text x="96" y="468" fill="#c9d3e3">B.A.T.</text>
+<text x="96" y="524" fill="#c9d3e3">Batman Returns</text>
+<text x="96" y="580" fill="#c9d3e3">Cannon Fodder</text>
+<text x="96" y="636" fill="#c9d3e3">Chaos Engine, The</text>
+<text x="96" y="692" fill="#5c6780">Chuck Rock</text>
+<text x="96" y="748" fill="#5c6780">Creatures</text>
+<text x="96" y="804" fill="#3d4558">Defender of the Crown</text>
+<text x="96" y="860" fill="#3d4558">DreamWeb</text>
+</g>
+
+<rect x="800" y="140" width="1040" height="585" rx="6" fill="url(#snapfake)" stroke="#1a2233" stroke-width="2"/>
+<g opacity="0.5" font-family="JetBrains Mono, monospace" font-size="22" fill="#00d4ff">
+<text x="1320" y="440" text-anchor="middle">APERCU DU JEU</text>
+</g>
+<circle cx="1000" cy="300" r="60" fill="#ff8a3d" opacity="0.3"/>
+<circle cx="1600" cy="500" r="90" fill="#00d4ff" opacity="0.2"/>
+
+<rect x="800" y="760" width="300" height="220" rx="6" fill="#141c2e" stroke="#1a2233" stroke-width="2"/>
+<text x="950" y="880" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="18" fill="#5c6780">JAQUETTE</text>
+
+<rect x="1140" y="760" width="700" height="220" rx="6" fill="#141c2e" stroke="#1a2233" stroke-width="2"/>
+<text x="1490" y="880" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="18" fill="#5c6780">BANDEAU</text>
+</svg>

@@ -6,6 +6,19 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.0] - 2026-09-13
+
+### Ajouté
+
+- Refonte complète du site web du projet (`site/index.html`) : hero animé en Three.js (champ d'étoiles et grille en dérive, désactivé si `prefers-reduced-motion`), bandeau de spécifications techniques, galerie de trois aperçus d'interface cliquables ouvrant une visionneuse plein écran, grille de fonctionnalités, présentation de l'architecture logicielle en couches, section d'installation résumée, avertissement légal sur l'absence de BIOS/ROMs fournis.
+- Trois maquettes SVG fidèles au thème réel du logiciel (`site/assets/mockup-*.svg`) : écran de sélection des jeux, écran « À propos », écran de paramètres — en attente de vraies captures d'écran issues d'un démarrage réel de l'image.
+- Exclusion de `.claude/` (fichiers locaux de l'environnement de développement) du dépôt Git.
+
+### Corrigé
+
+- Workflow `publier-site.yml` : ciblait un identifiant `#version` obsolète depuis la refonte du site, ne mettant plus à jour le numéro de version affiché. Corrigé pour cibler les nouveaux identifiants `#version-affichee` et `#version-footer`.
+- Script `scripts/verifier_mentions_ia.sh` : nouveaux faux positifs sur `.claude/` (nom de l'environnement de développement local, sans rapport avec une mention publique) et `.gitignore` (qui référence ce même nom de répertoire à exclure) ; ajout aux exclusions du scan.
+
 ## [0.9.1] - 2026-09-13
 
 ### Corrigé

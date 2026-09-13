@@ -4,24 +4,842 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AmiPC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Press+Start+2P&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
-    body { font-family: system-ui, sans-serif; max-width: 780px; margin: 40px auto; padding: 0 20px; background: #0A0E17; color: #E6E6E6; }
-    h1 { color: #00A8E8; }
-    a { color: #00A8E8; }
-    .version { color: #8A93A6; font-size: 0.9em; }
-    footer { margin-top: 60px; color: #8A93A6; font-size: 0.85em; border-top: 1px solid #1a2233; padding-top: 20px; }
+:root {
+    --fond: #080b14;
+    --surface: #10151f;
+    --surface-haute: #161d2c;
+    --ligne: #1e2636;
+    --texte: #e9eef5;
+    --texte-att: #8a93a8;
+    --texte-faible: #576078;
+    --cyan: #00d4ff;
+    --cyan-att: #0a2a38;
+    --ambre: #ff8a3d;
+    --rouge: #ff5d5d;
+}
+
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme="light"]) {
+        --fond: #080b14;
+        --surface: #10151f;
+        --surface-haute: #161d2c;
+        --ligne: #1e2636;
+        --texte: #e9eef5;
+        --texte-att: #8a93a8;
+        --texte-faible: #576078;
+    }
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--fond);
+    color: var(--texte);
+    font-family: "Inter", system-ui, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.enveloppe {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+a { color: var(--cyan); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+
+/* ---------- Barre de navigation ---------- */
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    background: rgba(8, 11, 20, 0.78);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--ligne);
+}
+
+.nav-logo {
+    font-family: "Press Start 2P", monospace;
+    font-size: 14px;
+    color: var(--cyan);
+    letter-spacing: 1px;
+}
+
+.nav-liens {
+    display: flex;
+    gap: 28px;
+    font-size: 15px;
+    color: var(--texte-att);
+}
+
+.nav-liens a { color: inherit; }
+.nav-liens a:hover { color: var(--texte); text-decoration: none; }
+
+.nav-cta {
+    padding: 9px 18px;
+    border-radius: 6px;
+    background: var(--cyan);
+    color: #041018;
+    font-weight: 600;
+    font-size: 14px;
+}
+.nav-cta:hover { text-decoration: none; background: #33dfff; }
+
+@media (max-width: 720px) {
+    .nav-liens { display: none; }
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 96px 24px 80px;
+    border-bottom: 1px solid var(--ligne);
+}
+
+#fond-3d {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.85;
+}
+
+.hero-contenu {
+    position: relative;
+    z-index: 1;
+    max-width: 1180px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-eyebrow {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    color: var(--ambre);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+}
+
+.hero-titre {
+    font-family: "Press Start 2P", monospace;
+    font-size: clamp(28px, 6vw, 56px);
+    line-height: 1.35;
+    margin: 0 0 24px;
+    color: var(--texte);
+    text-wrap: balance;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.35);
+}
+
+.hero-titre span { color: var(--cyan); }
+
+.hero-sous-titre {
+    font-size: 19px;
+    color: var(--texte-att);
+    max-width: 620px;
+    margin: 0 auto 40px;
+    text-wrap: balance;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 56px;
+}
+
+.bouton {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 26px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    border: 1px solid transparent;
+}
+
+.bouton-primaire { background: var(--cyan); color: #041018; }
+.bouton-primaire:hover { background: #33dfff; text-decoration: none; }
+
+.bouton-secondaire { background: transparent; color: var(--texte); border-color: var(--ligne); }
+.bouton-secondaire:hover { border-color: var(--cyan); color: var(--cyan); text-decoration: none; }
+
+.hero-version {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    color: var(--texte-faible);
+}
+.hero-version strong { color: var(--texte-att); }
+
+/* ---------- Bandeau specs ---------- */
+
+.specs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid var(--ligne);
+}
+
+.specs-item {
+    padding: 28px 20px;
+    text-align: center;
+    border-right: 1px solid var(--ligne);
+}
+.specs-item:last-child { border-right: none; }
+
+.specs-valeur {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--cyan);
+}
+
+.specs-label {
+    font-size: 13px;
+    color: var(--texte-faible);
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+@media (max-width: 720px) {
+    .specs { grid-template-columns: repeat(2, 1fr); }
+    .specs-item:nth-child(2) { border-right: none; }
+}
+
+/* ---------- Sections generales ---------- */
+
+section { padding: 88px 24px; }
+
+.section-eyebrow {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    color: var(--ambre);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+}
+
+.section-titre {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(26px, 4vw, 36px);
+    font-weight: 700;
+    margin: 0 0 16px;
+    text-wrap: balance;
+}
+
+.section-intro {
+    color: var(--texte-att);
+    max-width: 640px;
+    font-size: 17px;
+    margin: 0 0 48px;
+}
+
+/* ---------- Galerie ---------- */
+
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.galerie-carte {
+    border: 1px solid var(--ligne);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--surface);
+    cursor: zoom-in;
+    padding: 0;
+    text-align: left;
+    color: inherit;
+    font: inherit;
+}
+
+.galerie-carte img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-bottom: 1px solid var(--ligne);
+    transition: transform 0.35s ease;
+}
+
+.galerie-carte:hover img { transform: scale(1.035); }
+
+.galerie-legende {
+    padding: 16px 18px;
+}
+
+.galerie-legende-titre {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.galerie-legende-sous {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    color: var(--texte-faible);
+    margin-top: 4px;
+}
+
+.galerie-note {
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--texte-faible);
+    font-style: italic;
+}
+
+@media (max-width: 900px) {
+    .galerie { grid-template-columns: 1fr; }
+}
+
+/* ---------- Lightbox ---------- */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(4, 6, 11, 0.92);
+    padding: 40px;
+}
+.lightbox[hidden] { display: none; }
+
+.lightbox-image {
+    max-width: min(1400px, 92vw);
+    max-height: 86vh;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--ligne);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-fermer {
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    background: var(--surface-haute);
+    border: 1px solid var(--ligne);
+    color: var(--texte);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+.lightbox-fermer:hover { border-color: var(--cyan); color: var(--cyan); }
+
+.lightbox-legende {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    color: var(--texte-att);
+    background: rgba(16, 21, 31, 0.8);
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+/* ---------- Fonctionnalites ---------- */
+
+.grille-fonctions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--ligne);
+    border: 1px solid var(--ligne);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.fonction {
+    background: var(--surface);
+    padding: 32px 28px;
+}
+
+.fonction-icone {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 18px;
+}
+
+.fonction-titre {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    margin: 0 0 10px;
+}
+
+.fonction-texte {
+    color: var(--texte-att);
+    font-size: 14.5px;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .grille-fonctions { grid-template-columns: 1fr; }
+}
+
+/* ---------- Architecture ---------- */
+
+.pile {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--ligne);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.pile-couche {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+    align-items: center;
+    padding: 22px 28px;
+    border-bottom: 1px solid var(--ligne);
+    background: var(--surface);
+}
+.pile-couche:last-child { border-bottom: none; }
+.pile-couche:nth-child(even) { background: var(--surface-haute); }
+
+.pile-nom {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    color: var(--cyan);
+    font-weight: 500;
+}
+
+.pile-desc {
+    color: var(--texte-att);
+    font-size: 14.5px;
+}
+
+@media (max-width: 700px) {
+    .pile-couche { grid-template-columns: 1fr; gap: 6px; }
+}
+
+/* ---------- Contenu utilisateur (avertissement) ---------- */
+
+.avertissement {
+    display: flex;
+    gap: 18px;
+    padding: 28px;
+    border: 1px solid rgba(255, 138, 61, 0.35);
+    background: rgba(255, 138, 61, 0.06);
+    border-radius: 10px;
+}
+
+.avertissement-icone {
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    color: var(--ambre);
+}
+
+.avertissement-titre {
+    font-weight: 600;
+    margin: 0 0 6px;
+    color: var(--ambre);
+}
+
+.avertissement-texte {
+    margin: 0;
+    color: var(--texte-att);
+    font-size: 14.5px;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    border-top: 1px solid var(--ligne);
+    padding: 56px 24px 40px;
+}
+
+.footer-grille {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    font-family: "Press Start 2P", monospace;
+    font-size: 13px;
+    color: var(--cyan);
+    margin-bottom: 12px;
+}
+
+.footer-copy {
+    color: var(--texte-faible);
+    font-size: 13.5px;
+    max-width: 340px;
+}
+
+.footer-colonne-titre {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--texte-faible);
+    margin: 0 0 14px;
+}
+
+.footer-liens {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.footer-liens a { color: var(--texte-att); }
+.footer-liens a:hover { color: var(--cyan); text-decoration: none; }
+
+.footer-bas {
+    padding-top: 24px;
+    border-top: 1px solid var(--ligne);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12.5px;
+    color: var(--texte-faible);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .galerie-carte img { transition: none; }
+}
 </style>
 </head>
 <body>
-<h1>AmiPC</h1>
-<p class="version">Version <span id="version">0.9.0</span></p>
-<p>Distribution Linux embarquée minimale dédiée à l'émulation Amiga 500 et Amiga 1200, basée sur PUAE (libretro-uae) et AttractMode.</p>
-<p><a href="https://github.com/patrickjaillet/AmiPC/releases/latest">Télécharger la dernière version</a></p>
-<p><a href="https://github.com/patrickjaillet/AmiPC">Dépôt source</a></p>
+
+<nav class="nav">
+    <span class="nav-logo">AMIPC_</span>
+    <div class="nav-liens">
+        <a href="#galerie">Aperçu</a>
+        <a href="#fonctionnalites">Fonctionnalités</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#installation">Installation</a>
+    </div>
+    <a class="nav-cta" href="https://github.com/Patrickjaillet/AmiPC/releases/latest">Télécharger</a>
+</nav>
+
+<header class="hero">
+    <canvas id="fond-3d"></canvas>
+    <div class="hero-contenu">
+        <p class="hero-eyebrow">Amiga 500 · Amiga 1200 · PUAE · AttractMode</p>
+        <h1 class="hero-titre">Rallumez<br><span>l'Amiga.</span></h1>
+        <p class="hero-sous-titre">AmiPC est une distribution Linux embarquée minimale qui transforme n'importe quel PC en borne d'émulation Amiga, prête à jouer dès le démarrage — sans configuration.</p>
+        <div class="hero-actions">
+            <a class="bouton bouton-primaire" href="https://github.com/Patrickjaillet/AmiPC/releases/latest">Télécharger la dernière image</a>
+            <a class="bouton bouton-secondaire" href="https://github.com/Patrickjaillet/AmiPC">Voir le dépôt source</a>
+        </div>
+        <p class="hero-version">Version actuelle : <strong id="version-affichee">0.10.0</strong> · Licence propriétaire, tous droits réservés</p>
+    </div>
+</header>
+
+<div class="specs">
+    <div class="specs-item">
+        <div class="specs-valeur">A500 / A1200</div>
+        <div class="specs-label">Machines émulées</div>
+    </div>
+    <div class="specs-item">
+        <div class="specs-valeur">OCS · ECS · AGA</div>
+        <div class="specs-label">Chipsets pris en charge</div>
+    </div>
+    <div class="specs-item">
+        <div class="specs-valeur">ADF · IPF · ZIP · DMS · HDF</div>
+        <div class="specs-label">Formats de jeu</div>
+    </div>
+    <div class="specs-item">
+        <div class="specs-valeur">FR / EN</div>
+        <div class="specs-label">Interface</div>
+    </div>
+</div>
+
+<section id="galerie">
+    <div class="enveloppe">
+        <p class="section-eyebrow">Interface</p>
+        <h2 class="section-titre">Un frontend pensé comme une borne</h2>
+        <p class="section-intro">AttractMode habille l'émulation PUAE d'une interface sombre et directe : navigation manette, filtres par lettre, favoris, et un écran de configuration accessible sans quitter le clavier.</p>
+
+        <div class="galerie">
+            <button class="galerie-carte" data-image="assets/mockup-menu.svg" data-legende="Écran de sélection — thème AmiPC, filtres A-E/F-M/N-S/T-Z">
+                <img src="assets/mockup-menu.svg" alt="Aperçu de l'écran de sélection des jeux" loading="lazy">
+                <div class="galerie-legende">
+                    <div class="galerie-legende-titre">Sélection des jeux</div>
+                    <div class="galerie-legende-sous">theme/amipc — layout.nut</div>
+                </div>
+            </button>
+            <button class="galerie-carte" data-image="assets/mockup-apropos.svg" data-legende="Écran « À propos » — version, copyright et crédits tiers">
+                <img src="assets/mockup-apropos.svg" alt="Aperçu de l'écran À propos" loading="lazy">
+                <div class="galerie-legende">
+                    <div class="galerie-legende-titre">Écran « À propos »</div>
+                    <div class="galerie-legende-sous">plugins/amipc_about</div>
+                </div>
+            </button>
+            <button class="galerie-carte" data-image="assets/mockup-parametres.svg" data-legende="Menu de configuration — langue, luminosité, réseau, filtre vidéo">
+                <img src="assets/mockup-parametres.svg" alt="Aperçu de l'écran de paramètres" loading="lazy">
+                <div class="galerie-legende">
+                    <div class="galerie-legende-titre">Paramètres</div>
+                    <div class="galerie-legende-sous">plugins/amipc_settings</div>
+                </div>
+            </button>
+        </div>
+        <p class="galerie-note">Maquettes fidèles au thème réel du logiciel, en attendant les premières captures d'écran produites sur matériel.</p>
+    </div>
+</section>
+
+<section id="fonctionnalites">
+    <div class="enveloppe">
+        <p class="section-eyebrow">Fonctionnalités</p>
+        <h2 class="section-titre">Tout ce qu'il faut, rien de plus</h2>
+        <p class="section-intro">Une distribution volontairement minimale : elle démarre, elle joue, elle se met à jour — sans shell, sans friction.</p>
+
+        <div class="grille-fonctions">
+            <div class="fonction">
+                <svg class="fonction-icone" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="20" rx="2" stroke="#00d4ff" stroke-width="2"/><path d="M14 34h12M20 28v6" stroke="#00d4ff" stroke-width="2"/></svg>
+                <h3 class="fonction-titre">Démarrage direct</h3>
+                <p class="fonction-texte">Autologin sur AttractMode, aucun shell visible, aucune étape de configuration au premier lancement.</p>
+            </div>
+            <div class="fonction">
+                <svg class="fonction-icone" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="#00d4ff" stroke-width="2"/><path d="M20 12v8l6 4" stroke="#00d4ff" stroke-width="2"/></svg>
+                <h3 class="fonction-titre">Deux machines, un profil chacune</h3>
+                <p class="fonction-texte">Amiga 500 (Kickstart 1.3, OCS/ECS) et Amiga 1200 (Kickstart 3.1, AGA, 68020) préconfigurés dans PUAE.</p>
+            </div>
+            <div class="fonction">
+                <svg class="fonction-icone" viewBox="0 0 40 40" fill="none"><path d="M8 30V14l12-6 12 6v16l-12 6-12-6Z" stroke="#00d4ff" stroke-width="2"/><path d="M8 14l12 6 12-6M20 20v16" stroke="#00d4ff" stroke-width="2"/></svg>
+                <h3 class="fonction-titre">Multi-format</h3>
+                <p class="fonction-texte">ADF, IPF, ZIP, DMS et HDF pris en charge nativement, sans conversion préalable.</p>
+            </div>
+            <div class="fonction">
+                <svg class="fonction-icone" viewBox="0 0 40 40" fill="none"><rect x="6" y="10" width="28" height="20" rx="2" stroke="#00d4ff" stroke-width="2"/><path d="M12 34h16" stroke="#00d4ff" stroke-width="2"/></svg>
+                <h3 class="fonction-titre">Français / Anglais</h3>
+                <p class="fonction-texte">Interface entièrement traduite, langue détectée automatiquement puis modifiable à tout moment.</p>
+            </div>
+            <div class="fonction">
+                <svg class="fonction-icone" viewBox="0 0 40 40" fill="none"><path d="M20 6l4 8 9 1-6.5 6 1.5 9-8-4.5-8 4.5 1.5-9L7 15l9-1 4-8Z" stroke="#ff8a3d" stroke-width="2" stroke-linejoin="round"/></svg>
+                <h3 class="fonction-titre">Vérification d'intégrité</h3>
+                <p class="fonction-texte">Contrôle automatique des BIOS au démarrage, avec avertissement visible en cas d'anomalie.</p>
+            </div>
+            <div class="fonction">
+                <svg class="fonction-icone" viewBox="0 0 40 40" fill="none"><path d="M20 8v16M13 16l7 8 7-8" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 30h24" stroke="#00d4ff" stroke-width="2"/></svg>
+                <h3 class="fonction-titre">Contenu par USB</h3>
+                <p class="fonction-texte">Montage automatique des clés USB pour ajouter vos propres jeux et BIOS sans recompiler l'image.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="architecture">
+    <div class="enveloppe">
+        <p class="section-eyebrow">Architecture</p>
+        <h2 class="section-titre">Une pile logicielle courte</h2>
+        <p class="section-intro">Quatre couches, chacune remplaçable et documentée séparément.</p>
+
+        <div class="pile">
+            <div class="pile-couche">
+                <span class="pile-nom">AttractMode</span>
+                <span class="pile-desc">Frontend de sélection, thème AmiPC, plugins à propos / paramètres / alerte BIOS.</span>
+            </div>
+            <div class="pile-couche">
+                <span class="pile-nom">RetroArch + libretro-uae</span>
+                <span class="pile-desc">Conteneur d'exécution du core PUAE, profils machine par jeu.</span>
+            </div>
+            <div class="pile-couche">
+                <span class="pile-nom">Noyau Linux minimal</span>
+                <span class="pile-desc">KMS/DRM, ALSA, USB/HID, Bluetooth — rien de superflu.</span>
+            </div>
+            <div class="pile-couche">
+                <span class="pile-nom">Buildroot</span>
+                <span class="pile-desc">Génération de l'image système complète, GRUB2 BIOS/UEFI.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="installation">
+    <div class="enveloppe">
+        <p class="section-eyebrow">Installation</p>
+        <h2 class="section-titre">De l'image à la partie en trois étapes</h2>
+        <p class="section-intro">Le guide complet détaille l'écriture sur clé USB, le premier démarrage et la mise à jour ; en résumé :</p>
+
+        <div class="grille-fonctions">
+            <div class="fonction">
+                <h3 class="fonction-titre">1 · Écrire l'image</h3>
+                <p class="fonction-texte"><code>sudo dd if=amipc.img of=/dev/sdX bs=4M status=progress</code></p>
+            </div>
+            <div class="fonction">
+                <h3 class="fonction-titre">2 · Démarrer</h3>
+                <p class="fonction-texte">Insérer la clé, sélectionner le périphérique de boot — AttractMode s'affiche directement.</p>
+            </div>
+            <div class="fonction">
+                <h3 class="fonction-titre">3 · Ajouter son contenu</h3>
+                <p class="fonction-texte">Déposer BIOS et jeux via une clé USB portant l'arborescence <code>amipc/roms</code> et <code>amipc/bios</code>.</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px;">
+            <div class="avertissement">
+                <svg class="avertissement-icone" viewBox="0 0 24 24" fill="none"><path d="M12 3 2 20h20L12 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10v4M12 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <div>
+                    <p class="avertissement-titre">Aucun BIOS ni jeu fourni</p>
+                    <p class="avertissement-texte">AmiPC ne distribue aucun Kickstart ni aucune ROM commerciale. Ces fichiers restent sous le droit d'auteur de leurs ayants droit respectifs et doivent être fournis par l'utilisateur.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <footer>
-    Copyright © 2026 Patrick JAILLET — Tous droits réservés<br>
-    E-mail : sandefjord.development@proton.me<br>
-    Site web : https://patrickjaillet.github.io/AmiPC
+    <div class="enveloppe">
+        <div class="footer-grille">
+            <div>
+                <div class="footer-logo">AMIPC_</div>
+                <p class="footer-copy">Distribution Linux embarquée pour l'émulation Amiga 500 et Amiga 1200.</p>
+            </div>
+            <div>
+                <p class="footer-colonne-titre">Projet</p>
+                <ul class="footer-liens">
+                    <li><a href="https://github.com/Patrickjaillet/AmiPC">Dépôt GitHub</a></li>
+                    <li><a href="https://github.com/Patrickjaillet/AmiPC/releases">Releases</a></li>
+                    <li><a href="https://github.com/Patrickjaillet/AmiPC/blob/master/CHANGELOG.md">Journal des modifications</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-colonne-titre">Contact</p>
+                <ul class="footer-liens">
+                    <li><a href="mailto:sandefjord.development@proton.me">sandefjord.development@proton.me</a></li>
+                    <li><a href="https://patrickjaillet.github.io/AmiPC">patrickjaillet.github.io/AmiPC</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bas">
+            <span>Copyright © 2026 Patrick JAILLET — Tous droits réservés</span>
+            <span>AmiPC v<span id="version-footer">0.10.0</span></span>
+        </div>
+    </div>
 </footer>
+
+<div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-fermer" id="lightbox-fermer" aria-label="Fermer">&times;</button>
+    <img class="lightbox-image" id="lightbox-image" src="" alt="">
+    <div class="lightbox-legende" id="lightbox-legende"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function () {
+    var canvas = document.getElementById('fond-3d');
+    if (!canvas || typeof THREE === 'undefined') return;
+    var reduitMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(60, canvas.clientWidth / canvas.clientHeight, 0.1, 2000);
+    camera.position.set(0, 60, 220);
+
+    var renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    function redimensionner() {
+        var largeur = canvas.clientWidth;
+        var hauteur = canvas.clientHeight;
+        renderer.setSize(largeur, hauteur, false);
+        camera.aspect = largeur / hauteur;
+        camera.updateProjectionMatrix();
+    }
+
+    var nbEtoiles = 900;
+    var positions = new Float32Array(nbEtoiles * 3);
+    for (var i = 0; i < nbEtoiles; i++) {
+        positions[i * 3] = (Math.random() - 0.5) * 1400;
+        positions[i * 3 + 1] = (Math.random() - 0.5) * 700;
+        positions[i * 3 + 2] = (Math.random() - 0.5) * 1400;
+    }
+    var geoEtoiles = new THREE.BufferGeometry();
+    geoEtoiles.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    var matEtoiles = new THREE.PointsMaterial({ color: 0x9fd8ff, size: 1.6, transparent: true, opacity: 0.7 });
+    var etoiles = new THREE.Points(geoEtoiles, matEtoiles);
+    scene.add(etoiles);
+
+    var grille = new THREE.GridHelper(1600, 40, 0x00d4ff, 0x0f2230);
+    grille.position.y = -80;
+    grille.material.transparent = true;
+    grille.material.opacity = 0.35;
+    scene.add(grille);
+
+    redimensionner();
+    window.addEventListener('resize', redimensionner);
+
+    var horloge = new THREE.Clock();
+
+    function animer() {
+        var t = horloge.getElapsedTime();
+        etoiles.rotation.y = t * 0.015;
+        grille.position.z = (t * 12) % 40;
+        camera.position.x = Math.sin(t * 0.05) * 20;
+        renderer.render(scene, camera);
+        if (!reduitMotion) requestAnimationFrame(animer);
+    }
+
+    if (reduitMotion) {
+        renderer.render(scene, camera);
+    } else {
+        animer();
+    }
+})();
+</script>
+
+<script>
+(function () {
+    var lightbox = document.getElementById('lightbox');
+    var image = document.getElementById('lightbox-image');
+    var legende = document.getElementById('lightbox-legende');
+    var fermer = document.getElementById('lightbox-fermer');
+
+    document.querySelectorAll('.galerie-carte').forEach(function (carte) {
+        carte.addEventListener('click', function () {
+            image.src = carte.getAttribute('data-image');
+            image.alt = carte.getAttribute('data-legende') || '';
+            legende.textContent = carte.getAttribute('data-legende') || '';
+            lightbox.hidden = false;
+        });
+    });
+
+    function fermerLightbox() {
+        lightbox.hidden = true;
+        image.src = '';
+    }
+
+    fermer.addEventListener('click', fermerLightbox);
+    lightbox.addEventListener('click', function (evenement) {
+        if (evenement.target === lightbox) fermerLightbox();
+    });
+    document.addEventListener('keydown', function (evenement) {
+        if (evenement.key === 'Escape' && !lightbox.hidden) fermerLightbox();
+    });
+})();
+</script>
+
 </body>
 </html>
