@@ -1,0 +1,24 @@
+Sur un systeme headless sans serveur X11 (KMS/DRM direct), Mesa3D via
+Buildroot ne fournit pas d'interface libGL desktop, seulement OpenGL
+ES (GLES). Le header public SFML/OpenGL.hpp choisit entre GL/gl.h et
+GLES/gl.h selon que la macro SFML_OPENGL_ES est definie au moment de
+la compilation du code qui l'inclut. AttractMode definit deja sa
+propre macro USE_GLES pour piloter son propre usage de GLES (voir
+GLES_LIB, -lGLESv1_CM), mais ne definit jamais SFML_OPENGL_ES,
+provoquant l'inclusion du mauvais header cote SFML des que le code
+d'AttractMode inclut SFML/OpenGL.hpp.
+
+Ce correctif fait definir SFML_OPENGL_ES en meme temps que USE_GLES,
+sans modifier le comportement de USE_GLES lui-meme ni celui d'un build
+desktop classique (X11) ou USE_GLES vaut 0.
+
+--- a/Makefile
++++ b/Makefile
+@@ -322,6 +322,7 @@
+
+ ifeq ($(USE_GLES),1)
+  FE_FLAGS += -DUSE_GLES
++ FE_FLAGS += -DSFML_OPENGL_ES
+
+  #
+  # Hack for Raspberry Pi includes...

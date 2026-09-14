@@ -6,6 +6,14 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.9] - 2026-09-14
+
+### Corrigé
+
+- Compilation du paquet Buildroot `attractmode` : `libavutil/log.h` n'est plus une erreur (`NO_MOVIE=1` validé), la compilation atteint désormais le vrai code source d'AttractMode. Nouvel échec sur `SFML/OpenGL.hpp:54:18: fatal error: GL/gl.h: No such file or directory` — le symétrique côté « code consommant SFML » du problème déjà corrigé côté compilation interne de SFML : ce header public de SFML inclut `GL/gl.h` (OpenGL desktop, absent sur ce système headless) sauf si la macro `SFML_OPENGL_ES` est définie au moment de la compilation du code appelant, ce qu'AttractMode ne fait jamais.
+- Activation de `BR2_PACKAGE_MESA3D_OPENGL_ES` (Mesa3D) et `OPENGL_ES=TRUE` (option CMake de SFML), garantissant que Mesa fournit bien les headers/bibliothèques GLES et que SFML se compile lui-même en cohérence avec ce choix.
+- Ajout d'un second patch au paquet `attractmode` (`0001-define-SFML_OPENGL_ES-when-USE_GLES-is-enabled.patch`, testé localement avant intégration) : définit `SFML_OPENGL_ES` dès que la variable `USE_GLES` du Makefile amont est active, exactement comme SFML le fait pour son propre compte. Activation de `USE_GLES=1` et `USE_DRM=1` (variables `make` simples, sans risque d'écraser `CPPFLAGS`) à l'invocation du paquet, qui pilotent également la liaison correcte à `libGLESv1_CM`/`libdrm`/`libgbm` au lieu de `libGL`.
+
 ## [0.10.8] - 2026-09-14
 
 ### Corrigé
