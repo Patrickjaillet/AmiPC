@@ -6,6 +6,13 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.11] - 2026-09-14
+
+### Corrigé
+
+- Compilation du paquet Buildroot `attractmode` : toutes les unités de compilation d'AttractMode compilent désormais avec succès (`Creating executable: attract`) — plus aucune erreur de compilation. L'édition de liens échouait sur `undefined reference to 'glGetString'`. Cause probable : le Makefile amont lie par défaut `-lGLESv1_CM` dès que `USE_GLES=1` (sauf cas Raspberry Pi/BCM non applicable ici), or bien que Mesa3D construise et installe cette bibliothèque, son symbole `glGetString` n'est apparemment pas exporté de façon exploitable dans ce contexte de compilation croisée Buildroot.
+- Ajout de `GLES_LIB=-lGLESv2` à l'invocation `make` du paquet `attractmode`, forçant explicitement la liaison contre `libGLESv2.so` (implémentation OpenGL ES 2.0 standard de Mesa, dont l'export de `glGetString` est mieux établi) au lieu de laisser le Makefile amont choisir `-lGLESv1_CM` par défaut.
+
 ## [0.10.10] - 2026-09-14
 
 ### Corrigé
