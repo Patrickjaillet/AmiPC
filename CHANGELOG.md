@@ -6,6 +6,13 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.18] - 2026-09-14
+
+### Corrigé
+
+- Génération de l'image disque finale : `host-genimage` est construit avec succès (dix-septième correctif validé), AttractMode et `post-build.sh` fonctionnent intégralement (seizième correctif validé). `genimage` s'exécutait mais échouait avec `ERROR: hdimage(amipc.img): could not setup efi-part.vfat` — `genimage.cfg` référence un fichier `efi-part.vfat` que `post-image.sh` ne générait jamais.
+- Buildroot construit déjà automatiquement un répertoire `output/images/efi-part/` (bootloader GRUB2 EFI prêt à l'emploi, généré grâce à `BR2_TARGET_GRUB2_X86_64_EFI`) — la même logique que celle qu'il utilise en interne pour son propre générateur d'image ISO9660 (`mkfs.vfat` + `mcopy`). `post-image.sh` construit désormais explicitement `efi-part.vfat` à partir de ce répertoire avant d'invoquer `genimage`, en réutilisant les outils hôtes `mkfs.vfat`/`mcopy` déjà fournis par Buildroot (`$HOST_DIR/sbin` et `$HOST_DIR/bin`).
+
 ## [0.10.17] - 2026-09-14
 
 ### Corrigé
