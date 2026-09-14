@@ -64,6 +64,20 @@ build/buildroot-<version>/output/images/
 
 ---
 
+## Accélération des Compilations Répétées (ccache)
+
+Le defconfig active `BR2_CCACHE`, qui compile et utilise automatiquement `ccache` (stocké par défaut dans `$HOME/.buildroot-ccache`) pour éviter de recompiler des fichiers sources inchangés d'une exécution à l'autre. Le gain n'apparaît qu'à partir du **deuxième** build (le premier doit construire `host-ccache` lui-même avant de pouvoir s'en servir).
+
+En intégration continue (GitHub Actions), ce répertoire est automatiquement mis en cache entre les exécutions (`.github/workflows/build-image.yml` et `publier-release.yml`), tout comme le répertoire des sources téléchargées (`build/buildroot-*/dl`), qui ne change que si la version de Buildroot ou la liste des paquets évolue.
+
+En local, pour purger le cache après un changement de version de compilateur ou de configuration incompatible :
+
+```sh
+rm -rf "$HOME/.buildroot-ccache"
+```
+
+---
+
 ## Compilation manuelle (pas à pas)
 
 ```sh

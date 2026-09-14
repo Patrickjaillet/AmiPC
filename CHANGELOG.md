@@ -6,6 +6,14 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.22] - 2026-09-15
+
+### Ajouté
+
+- Activation de `BR2_CCACHE` dans le defconfig, avec une taille de cache maximale de 5 Go, pour accélérer significativement les recompilations répétées (utile notamment lors d'itérations de correctifs successifs sur un même paquet).
+- Cache GitHub Actions pour `~/.buildroot-ccache` (résultats de compilation) et `build/buildroot-*/dl` (sources téléchargées, invariantes tant que la version de Buildroot ne change pas) dans `build-image.yml` et `publier-release.yml`, réduisant la durée des builds répétés une fois le cache initial constitué.
+- Documentation du mécanisme de cache et de sa procédure de purge dans `COMPILATION.md`.
+
 ## [0.10.21] - 2026-09-15
 
 ### Modifié

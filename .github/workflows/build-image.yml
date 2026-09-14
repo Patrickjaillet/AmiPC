@@ -20,6 +20,23 @@ jobs:
             libncurses-dev python3 cpio file wget libelf-dev flex bison \
             libssl-dev
 
+      - name: Restauration du cache ccache
+        uses: actions/cache@v4
+        with:
+          path: ~/.buildroot-ccache
+          key: ccache-${{ runner.os }}-${{ hashFiles('buildroot-external/configs/amipc_x86_64_defconfig') }}-${{ github.run_id }}
+          restore-keys: |
+            ccache-${{ runner.os }}-${{ hashFiles('buildroot-external/configs/amipc_x86_64_defconfig') }}-
+            ccache-${{ runner.os }}-
+
+      - name: Restauration du cache des sources téléchargées
+        uses: actions/cache@v4
+        with:
+          path: build/buildroot-*/dl
+          key: buildroot-dl-2024.02.6-${{ hashFiles('buildroot-external/configs/amipc_x86_64_defconfig') }}
+          restore-keys: |
+            buildroot-dl-2024.02.6-
+
       - name: Compilation de l'image AmiPC
         run: sh scripts/construire_image.sh
 
