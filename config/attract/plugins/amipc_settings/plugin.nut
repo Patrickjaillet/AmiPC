@@ -10,6 +10,9 @@ class UserConfig {
 
 	</ Filtre video par defaut >
 	filtre_video = "Pixel Perfect", { "Pixel Perfect", "Scanlines" }
+
+	</ Verifier le reseau avant scraping (menu Afficher > Recharger/Scraper) >
+	verifier_reseau_scraping = "Oui", { "Oui", "Non" }
 }
 
 fe.plugin_config["amipc_settings"] <- {}
@@ -39,3 +42,7 @@ appliquer_langue()
 appliquer_luminosite()
 appliquer_reseau()
 appliquer_filtre_video()
+
+if (config["verifier_reseau_scraping"] == "Oui") {
+	system("/usr/bin/amipc-verifier-reseau >/data/attract/dernier-controle-reseau.log 2>&1")
+}

@@ -6,6 +6,14 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.23] - 2026-09-15
+
+### Ajouté
+
+- Script `amipc-verifier-reseau` (paquet `amipc-init`) : contrôle la connectivité réseau (test vers `thegamesdb.net`) avant une session de scraping AttractMode, et journalise le résultat dans `/data/attract/dernier-controle-reseau.log`.
+- Option **Vérifier le réseau avant scraping** dans le plugin de paramètres AmiPC, exécutant automatiquement ce contrôle au démarrage du frontend.
+- Documentation détaillée de la procédure de scraping des métadonnées (jaquettes, snapshots, descriptions, genres) via le menu natif AttractMode dans `docs/ATTRACTMODE.md`.
+
 ## [0.10.22] - 2026-09-15
 
 ### Ajouté

@@ -12,6 +12,7 @@ define AMIPC_INIT_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(AMIPC_INIT_SITE)/amipc-set-shader.sh $(TARGET_DIR)/usr/bin/amipc-set-shader
 	$(INSTALL) -D -m 0755 $(AMIPC_INIT_SITE)/amipc-detecter-langue.sh $(TARGET_DIR)/usr/bin/amipc-detecter-langue
 	$(INSTALL) -D -m 0755 $(AMIPC_INIT_SITE)/amipc-verifier-bios.sh $(TARGET_DIR)/usr/bin/amipc-verifier-bios
+	$(INSTALL) -D -m 0755 $(AMIPC_INIT_SITE)/amipc-verifier-reseau.sh $(TARGET_DIR)/usr/bin/amipc-verifier-reseau
 	$(INSTALL) -D -m 0644 $(AMIPC_INIT_SITE)/amipc-bios-reference.txt $(TARGET_DIR)/etc/amipc/bios-reference.txt
 	$(INSTALL) -d -m 0755 $(TARGET_DIR)/etc/amipc
 	$(INSTALL) -D -m 0644 $(AMIPC_INIT_SITE)/amipc.conf $(TARGET_DIR)/etc/amipc/amipc.conf

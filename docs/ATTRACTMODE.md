@@ -31,7 +31,22 @@ Le romlist Amiga 1200 (`amiga1200.txt`) est initialisé vide, prêt à être peu
 
 ## 4. Scraping et Métadonnées
 
-Les répertoires d'illustrations sont préparés dans `config/attract/artwork/<systeme>/{flyer,marquee,snap,wheel}/`. Le scraping effectif (téléchargement des jaquettes, snapshots, descriptions et genres depuis TheGamesDB, configuré via `info_source thegamesdb` dans les fichiers émulateur) doit être lancé depuis l'utilitaire de scraping intégré à AttractMode, exécuté sur la machine cible après compilation — nécessite un accès réseau et n'est pas automatisable depuis cet environnement de préparation.
+Les répertoires d'illustrations sont préparés dans `config/attract/artwork/<systeme>/{flyer,marquee,snap,wheel}/`. Le scraping effectif (téléchargement des jaquettes, snapshots, descriptions et genres depuis TheGamesDB, configuré via `info_source thegamesdb` dans les fichiers émulateur) doit être lancé depuis l'utilitaire de scraping intégré à AttractMode (menu d'affichage → *Generate/Scrape*), exécuté sur la machine cible après compilation — nécessite un accès réseau et n'est pas automatisable depuis cet environnement de préparation.
+
+Procédure sur la machine cible :
+
+1. Activer le Wi-Fi depuis le menu Paramètres AmiPC (option **Réseau Wi-Fi**), ou brancher une connexion filaire.
+2. Ouvrir le menu d'affichage AttractMode (touche `Tab`) pour le display concerné (Amiga 500 ou Amiga 1200).
+3. Sélectionner **Generate/Scrape** puis choisir les catégories à récupérer (jaquettes, snapshots, descriptions, genres) — AttractMode interroge automatiquement TheGamesDB via `info_source thegamesdb`.
+4. Les fichiers récupérés sont déposés dans les répertoires `artwork/` déjà déclarés ; aucune configuration supplémentaire n'est nécessaire.
+
+Un script de contrôle réseau (`amipc-verifier-reseau`, paquet `amipc-init`) s'exécute automatiquement au chargement du plugin de paramètres et consigne l'état de connectivité (test de résolution/ping vers `thegamesdb.net`) dans `/data/attract/dernier-controle-reseau.log`, afin de diagnostiquer rapidement un scraping resté vide faute de réseau. Il peut aussi être lancé manuellement :
+
+```sh
+amipc-verifier-reseau
+```
+
+Ce contrôle est activable/désactivable via l'option **Vérifier le réseau avant scraping** du menu Paramètres.
 
 ## 5. Thème Visuel
 
@@ -65,8 +80,9 @@ Un plugin AttractMode (`config/attract/plugins/amipc_settings/plugin.nut`) expos
 - **Luminosité** (50 à 100 %) → applique `amipc-set-luminosite` (pilotage `/sys/class/backlight`).
 - **Réseau Wi-Fi** (Oui / Non) → applique `amipc-set-reseau` (`ifup`/`ifdown wlan0`).
 - **Filtre vidéo** (Pixel Perfect / Scanlines) → applique `amipc-set-shader`, qui modifie `video_shader` dans `retroarch.cfg`.
+- **Vérifier le réseau avant scraping** (Oui / Non) → exécute `amipc-verifier-reseau` au démarrage du plugin et journalise le résultat.
 
-Les quatre scripts `amipc-set-*` sont installés par le paquet Buildroot `amipc-init` dans `/usr/bin/`.
+Les scripts `amipc-set-*` et `amipc-verifier-reseau` sont installés par le paquet Buildroot `amipc-init` dans `/usr/bin/`.
 
 ---
 
