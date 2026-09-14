@@ -6,6 +6,13 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.8] - 2026-09-14
+
+### Corrigé
+
+- Compilation du paquet Buildroot `attractmode` : les boucles Kconfig sont résolues (aucune erreur au démarrage du build v0.10.7), SFML compile et s'installe intégralement, `squirrel.h` n'est plus une erreur — seul `libavutil/log.h` (FFmpeg) restait introuvable. Cause : FFmpeg n'a jamais été ajouté comme dépendance Buildroot (ni au defconfig, ni au paquet `attractmode`), or le Makefile amont d'AttractMode le requiert inconditionnellement pour la prévisualisation vidéo des jeux, fonctionnalité non nécessaire à ce stade du projet (les aperçus prévus sont des snapshots statiques, cf. section 4 du ROADMAP).
+- Ajout de `NO_MOVIE=1` à l'invocation `make` du paquet `attractmode`, désactivant proprement la dépendance FFmpeg côté Makefile amont (mécanisme documenté et prévu par AttractMode lui-même) plutôt que d'ajouter FFmpeg comme dépendance Buildroot supplémentaire, ce qui aurait alourdi l'image pour une fonctionnalité non utilisée.
+
 ## [0.10.7] - 2026-09-14
 
 ### Corrigé
