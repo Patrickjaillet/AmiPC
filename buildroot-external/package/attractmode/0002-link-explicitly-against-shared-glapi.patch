@@ -1,0 +1,24 @@
+Mesa3D est construit par Buildroot avec shared-glapi active (option
+meson -Dshared-glapi=enabled), ce qui deplace les symboles OpenGL
+reels tels que glGetString() dans une bibliotheque separee
+libglapi.so plutot que dans libGL.so elle-meme (qui ne contient que
+le dispatch GLX). Sans liaison explicite a cette bibliotheque, l'
+edition de liens de l'executable attract echoue avec "undefined
+reference to glGetString", le linker GNU moderne (--as-needed par
+defaut) ne resolvant pas systematiquement cette dependance transitive
+au travers de la seule liaison a libGL.
+
+Ce correctif ajoute -lglapi immediatement apres -lGL dans le cas
+OpenGL desktop, sans modifier le cas GLES (deja gere separement) ni
+les autres plateformes.
+
+--- a/Makefile
++++ b/Makefile
+@@ -353,6 +353,7 @@
+    LIBS += $(GLES_LIB)
+   else
+    LIBS += -lGL
++   LIBS += -lglapi
+   endif
+  endif
+ endif

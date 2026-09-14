@@ -6,6 +6,13 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.14] - 2026-09-14
+
+### Corrigé
+
+- Compilation du paquet Buildroot `attractmode` : `GL/gl.h` est désormais bien installé (Mesa/GLX fonctionnel, cf. section précédente), et toutes les unités de compilation réussissent (`Creating executable: attract`). L'édition de liens échouait toujours sur `undefined reference to glGetString`, cette fois avec `-lGL` (le même symptôme rencontré précédemment avec GLES n'était donc pas spécifique à GLES). Cause racine identifiée : Mesa3D est construit par Buildroot avec `shared-glapi` activé (option meson `-Dshared-glapi=enabled`), ce qui déplace les symboles OpenGL réels comme `glGetString` dans une bibliothèque séparée `libglapi.so`, tandis que `libGL.so` (GLX) ne contient que la table de dispatch. Le linker GNU moderne (`--as-needed` par défaut) ne résout pas systématiquement cette dépendance transitive via la seule liaison à `-lGL`.
+- Ajout d'un troisième patch au paquet `attractmode` (`0002-link-explicitly-against-shared-glapi.patch`, testé localement avant intégration) : ajoute `-lglapi` immédiatement après `-lGL` dans le cas OpenGL desktop du Makefile amont, sans modifier le cas GLES (déjà distinct) ni les autres plateformes. `libglapi.so` est déjà construite et installée par Mesa dans le staging, aucune dépendance Buildroot supplémentaire n'est nécessaire.
+
 ## [0.10.13] - 2026-09-14
 
 ### Corrigé
