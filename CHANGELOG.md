@@ -6,6 +6,13 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.13] - 2026-09-14
+
+### Corrigé
+
+- Compilation du paquet Buildroot `attractmode` : le retour à OpenGL desktop (v0.10.12) réintroduisait `fatal error: GL/gl.h: No such file or directory` alors que ce header avait été installé dans un build précédent. Cause racine identifiée : `BR2_PACKAGE_MESA3D_OPENGL_GLX` dépend strictement de `BR2_PACKAGE_XORG7` (jamais activé, système headless voulu) — Kconfig ignore silencieusement une option `depends on` non satisfaite même si elle est écrite `=y` dans le defconfig, donc `GL/gl.h` n'était en réalité jamais réellement construit malgré l'apparence de configuration correcte.
+- Activation de `BR2_PACKAGE_XORG7=y`, qui ne construit qu'une catégorie de bibliothèques X11 de développement (aucun serveur Xorg n'est sélectionné ni lancé au runtime) — strictement nécessaire pour satisfaire la dépendance Kconfig de `MESA3D_OPENGL_GLX`, qui sélectionne alors automatiquement les libs X11 minimales requises (`libX11`, `libXext`, etc. via `MESA3D_NEEDS_X11`). Retrait de `BR2_PACKAGE_MESA3D_OPENGL_ES` du defconfig et du paquet `sfml` (Config.in), devenu inutile après l'abandon de la piste GLES.
+
 ## [0.10.12] - 2026-09-14
 
 ### Corrigé
