@@ -1,0 +1,111 @@
+name: Mesure du temps de démarrage
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag de la release à tester (ex. v0.10.19). Vide = derniere release."
+        required: false
+        default: ""
+  release:
+    types: [published]
+
+jobs:
+  boot-qemu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupération du dépôt
+        uses: actions/checkout@v4
+
+      - name: Installation de QEMU
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y qemu-system-x86 ovmf
+
+      - name: Détermination du tag à tester
+        id: tag
+        run: |
+          if [ -n "${{ github.event.inputs.tag }}" ]; then
+            TAG="${{ github.event.inputs.tag }}"
+          elif [ "${{ github.event_name }}" = "release" ]; then
+            TAG="${{ github.event.release.tag_name }}"
+          else
+            TAG="$(gh release view --repo ${{ github.repository }} --json tagName -q .tagName)"
+          fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Téléchargement de amipc.img
+        run: |
+          gh release download "${{ steps.tag.outputs.tag }}" \
+            --repo ${{ github.repository }} \
+            --pattern amipc.img \
+            --output amipc.img
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Démarrage dans QEMU et mesure du temps de boot
+        timeout-minutes: 5
+        run: |
+          if [ -e /dev/kvm ]; then
+            ACCEL="-enable-kvm -cpu host"
+          else
+            ACCEL="-cpu max"
+          fi
+
+          qemu-system-x86_64 \
+            $ACCEL \
+            -m 1024 \
+            -smp 2 \
+            -drive file=amipc.img,format=raw,if=virtio \
+            -nographic \
+            -serial mon:stdio \
+            -netdev none \
+            2>&1 | tee boot.log &
+          QEMU_PID=$!
+
+          DEBUT=$(date +%s)
+          TIMEOUT=280
+          MARQUEUR_TROUVE=0
+
+          while [ $(( $(date +%s) - DEBUT )) -lt $TIMEOUT ]; do
+            if grep -q "AMIPC_BOOT_MARKER" boot.log 2>/dev/null; then
+              MARQUEUR_TROUVE=1
+              break
+            fi
+            if ! kill -0 $QEMU_PID 2>/dev/null; then
+              break
+            fi
+            sleep 1
+          done
+
+          kill $QEMU_PID 2>/dev/null || true
+          wait $QEMU_PID 2>/dev/null || true
+
+          if [ "$MARQUEUR_TROUVE" -eq 1 ]; then
+            TEMPS_BOOT=$(grep "AMIPC_BOOT_MARKER" boot.log | tail -n1 | awk '{print $2}')
+            echo "Temps de demarrage (depuis le noyau jusqu'a AttractMode) : ${TEMPS_BOOT} secondes"
+            echo "TEMPS_BOOT=${TEMPS_BOOT}" >> "$GITHUB_ENV"
+          else
+            echo "ERREUR : marqueur de demarrage introuvable dans le delai imparti (${TIMEOUT}s)." >&2
+            echo "--- Dernieres lignes du journal de boot ---" >&2
+            tail -n 100 boot.log >&2
+            exit 1
+          fi
+
+      - name: Publication du résultat
+        run: |
+          echo "## Temps de démarrage — ${{ steps.tag.outputs.tag }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "Temps depuis le boot du noyau Linux jusqu'au lancement d'AttractMode : **${TEMPS_BOOT} s**" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "_Mesure effectuée sous QEMU/KVM (runner GitHub Actions), n'inclut pas le temps de firmware/GRUB2 d'une machine physique réelle._" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Archivage du journal de démarrage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: boot-log-${{ steps.tag.outputs.tag }}
+          path: boot.log
+          retention-days: 30

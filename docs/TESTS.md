@@ -100,13 +100,18 @@ Répéter avec VirtualBox (import de l'image en disque IDE/SATA, 1 Go de RAM min
 
 ## 8. Mesure du Temps de Démarrage
 
-**Procédure** : chronométrer le délai entre la mise sous tension et l'affichage effectif de l'interface AttractMode, sur machine physique et en VM. Documenter les résultats ci-dessous et, le cas échéant, les optimisations appliquées (réduction du timeout GRUB, désactivation de services non essentiels).
+**Automatisé** : le workflow [`.github/workflows/mesurer-temps-boot.yml`](../.github/workflows/mesurer-temps-boot.yml) télécharge automatiquement l'image de la dernière release (ou d'un tag donné, via déclenchement manuel), la démarre sous QEMU/KVM sur le runner GitHub Actions, et mesure le temps écoulé entre le boot du noyau Linux et le lancement effectif d'AttractMode. Le script [`amipc-start.sh`](../buildroot-external/package/amipc-init/files/amipc-start.sh) écrit un marqueur (`AMIPC_BOOT_MARKER <secondes>`, basé sur `/proc/uptime`) sur la console série juste avant de lancer AttractMode ; le workflow lit ce marqueur pour calculer la durée et la publie dans le résumé du run ainsi qu'un journal de démarrage complet en artefact.
 
-| Environnement       | Temps mesuré | Date       |
-|----------------------|--------------|------------|
-| _à renseigner_       | _à renseigner_ | _à renseigner_ |
+Se déclenche automatiquement à chaque publication de release, ou manuellement via `workflow_dispatch` (onglet Actions du dépôt, en précisant éventuellement un tag).
 
-**Résultat** : _non exécuté_.
+**Limite connue** : cette mesure couvre le temps depuis le boot du noyau jusqu'à AttractMode ; elle n'inclut ni le temps de firmware (BIOS/UEFI) ni celui du menu GRUB2, propres à chaque machine physique et non mesurables en CI. Une mesure complémentaire sur machine physique réelle (chronométrage manuel de la mise sous tension à l'affichage d'AttractMade) reste à documenter ci-dessous pour compléter cette donnée automatisée.
+
+| Environnement                          | Temps mesuré (noyau → AttractMode) | Date       |
+|-----------------------------------------|--------------------------------------|------------|
+| QEMU/KVM (GitHub Actions, automatisé)   | _voir résumé du dernier run du workflow_ | _voir historique Actions_ |
+| Machine physique (BIOS/UEFI)            | _à renseigner_                       | _à renseigner_ |
+
+**Résultat** : mesure automatisée en place et exécutable dès la prochaine release ; mesure sur machine physique réelle toujours à réaliser manuellement.
 
 ---
 

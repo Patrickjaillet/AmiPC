@@ -6,6 +6,15 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.20] - 2026-09-15
+
+### Ajouté
+
+- Workflow `mesurer-temps-boot.yml` : mesure automatisée du temps de démarrage sous QEMU/KVM en CI, déclenchée à chaque publication de release ou manuellement. Télécharge l'image de la release testée, la démarre, et mesure le temps écoulé entre le boot du noyau Linux et le lancement d'AttractMode via un marqueur (`AMIPC_BOOT_MARKER`) écrit sur la console série.
+- Marqueur de fin de démarrage dans `amipc-start.sh` (basé sur `/proc/uptime`, écrit sur `/dev/console` et `/dev/ttyS0`).
+- Support de la console série dans le noyau (`CONFIG_SERIAL_8250`, `CONFIG_SERIAL_8250_CONSOLE`, `CONFIG_SERIAL_8250_PCI`), utile à la fois pour cette mesure automatisée et pour le diagnostic sur matériel physique réel.
+- Documentation de la procédure de mesure automatisée dans `docs/TESTS.md` (section 8 du ROADMAP), avec limite explicite : cette mesure ne couvre pas le temps de firmware/GRUB2, propre à chaque machine physique.
+
 ## [0.10.19] - 2026-09-14
 
 ### 🎉 Premier succès complet de bout en bout
