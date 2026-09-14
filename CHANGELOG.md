@@ -6,6 +6,17 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.19] - 2026-09-14
+
+### 🎉 Premier succès complet de bout en bout
+
+- **Le pipeline Buildroot complet a réussi de bout en bout pour la première fois** (`amipc.img` généré avec succès sur le tag v0.10.18) — noyau Linux, GRUB2, Mesa3D/X11, RetroArch/libretro-uae, SFML, AttractMode et image disque finale, validant l'ensemble des dix-huit corrections réelles appliquées successivement dans cette session (dépendances de compilation du noyau, sélection et configuration de SFML, boucles de dépendance Kconfig, patchs de compilation et de liaison d'AttractMode, activation minimale de X11 pour Mesa/GLX, permissions d'exécution Git, outil `genimage`, génération de la partition EFI).
+
+### Corrigé
+
+- Publication de la release GitHub : le build de l'image a réussi intégralement, mais la publication échouait avec `403 Resource not accessible by integration` — le paramètre `default_workflow_permissions` du dépôt était réglé sur `read`, plafonnant le `GITHUB_TOKEN` en lecture seule quelle que soit la permission déclarée dans le workflow (`permissions: contents: write` ne peut qu'élever une permission dans la limite de ce plafond, jamais au-delà).
+- Ajout explicite de `permissions: contents: write` à `publier-release.yml` et changement du paramètre `default_workflow_permissions` du dépôt à `write` au niveau GitHub.
+
 ## [0.10.18] - 2026-09-14
 
 ### Corrigé
