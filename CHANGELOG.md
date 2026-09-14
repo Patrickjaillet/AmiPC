@@ -6,6 +6,13 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.5] - 2026-09-14
+
+### Corrigé
+
+- Compilation du paquet Buildroot `sfml` : DRM et GBM sont désormais trouvés avec succès (fixes précédents validés), mais la configuration CMake échouait ensuite sur `Could NOT find OpenGL (missing: OPENGL_opengl_LIBRARY OPENGL_glx_LIBRARY OPENGL_INCLUDE_DIR)`. Cause : le module Window de SFML 2.6.1/2.6.2 exige inconditionnellement une interface OpenGL desktop (`find_package(OpenGL)`) sur Linux, y compris lorsque `SFML_USE_DRM` est actif — alors que le backend DRM n'utilise en réalité que des bindings EGL/GLES générés en interne (`glad/egl.h`, `DRMContext.cpp`) et n'a jamais besoin de `libGL`/`GL/gl.h`. Or dans Buildroot, l'interface libGL desktop (`BR2_PACKAGE_HAS_LIBGL`) n'est fournie que par `MESA3D_OPENGL_GLX`, lui-même verrouillé derrière `BR2_PACKAGE_XORG7` — sans alternative headless.
+- Ajout d'un patch Buildroot (`0001-window-skip-desktop-opengl-detection-under-drm.patch`) au paquet `sfml` : ignore la recherche d'OpenGL desktop lorsque `SFML_USE_DRM` est actif, sans toucher au comportement standard X11/desktop de SFML sur les autres plateformes.
+
 ## [0.10.4] - 2026-09-14
 
 ### Corrigé
