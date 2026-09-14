@@ -6,6 +6,13 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.12] - 2026-09-14
+
+### Corrigé
+
+- Compilation du paquet Buildroot `attractmode` : `GLES_LIB=-lGLESv2` n'a pas résolu l'échec de lien `undefined reference to glGetString` — la bibliothèque `libGLESv2.so` construite par Mesa 24.0.9 en compilation croisée Buildroot n'exporte apparemment pas ce symbole de façon exploitable par le lien, indépendamment du choix `-lGLESv1_CM`/`-lGLESv2`.
+- Retour à OpenGL desktop classique plutôt que poursuivre l'investigation GLES : retrait de `USE_GLES=1`/`GLES_LIB=-lGLESv2` de l'invocation `make` d'`attractmode` (conservant `USE_DRM=1`, indépendant du choix GL/GLES) et de `OPENGL_ES=TRUE` du paquet `sfml` (repassé à `FALSE`). Mesa fournit déjà un `libGL.so` desktop complet et fonctionnel via GLX (confirmé par les builds précédents), qu'AttractMode et SFML utilisent désormais de façon cohérente. Le patch SFML évitant `find_package(OpenGL)` en mode DRM reste actif et nécessaire, indépendamment de ce choix.
+
 ## [0.10.11] - 2026-09-14
 
 ### Corrigé
