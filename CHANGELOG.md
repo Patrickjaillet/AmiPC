@@ -6,6 +6,14 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.7] - 2026-09-14
+
+### Corrigé
+
+- Configuration Kconfig : deux boucles de dépendance récursive détectées au démarrage du build v0.10.6 (`recursive dependency detected!`), sans bloquer la compilation mais invalidant silencieusement certaines options (dont `BR2_PACKAGE_MESA3D_GBM`, retombé à `n` malgré son activation explicite, d'où la persistance de `libavutil/log.h` introuvable — FFmpeg n'était plus réellement sélectionné une fois le solveur Kconfig en échec).
+  - Boucle triviale : `sfml/Config.in` combinait `depends on BR2_PACKAGE_HAS_UDEV` et `select BR2_PACKAGE_EUDEV`, ce dernier sélectionnant lui-même `HAS_UDEV` en interne — un cycle direct. Le `depends on` redondant est retiré, `select EUDEV` suffit à garantir la présence d'udev.
+  - Boucle plus large impliquant des paquets tiers Buildroot : `attractmode → (depends on) sdl2 ← (selected by) ffmpeg_ffplay ← ffmpeg ← kodi ← (depends on) has_libegl ← libglvnd ← mesa3d_opengl_egl ← mesa3d_gallium_driver_v3d ← mesa3d ← (selected by) sfml`. Remplacement de `depends on BR2_PACKAGE_SDL2` par `select BR2_PACKAGE_SDL2` dans `attractmode/Config.in`, qui reste fonctionnellement équivalent (SDL2 est de toute façon requis) sans refermer la boucle avec la chaîne Kodi/FFmpeg/EGL propre à l'arbre Kconfig standard de Buildroot.
+
 ## [0.10.6] - 2026-09-14
 
 ### Corrigé
