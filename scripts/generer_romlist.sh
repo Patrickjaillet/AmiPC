@@ -17,8 +17,12 @@ echo "#Name;Title;Emulator;CloneOf;Year;Manufacturer;Category;Players;Rotation;C
 
 find "$ROMS_DIR" -type f -name "*.zip" | sort | while IFS= read -r FICHIER; do
     NOM_BASE="$(basename "$FICHIER" .zip)"
-    TITRE="$(printf '%s' "$NOM_BASE" | sed -E 's/\s*\([0-9]{4}[^)]*\).*//' | sed 's/[[:space:]]*$//')"
     ANNEE="$(printf '%s' "$NOM_BASE" | grep -oE '\(([0-9]{4})' | head -n1 | tr -d '(' || true)"
+    if [ -n "$ANNEE" ]; then
+        TITRE="$(printf '%s' "$NOM_BASE" | sed -E 's/\s*\([0-9]{4}[^)]*\).*//' | sed 's/[[:space:]]*$//')"
+    else
+        TITRE="$(printf '%s' "$NOM_BASE" | sed -E 's/\s*(\([^)]*\)|\[[^]]*\])\s*//g' | sed 's/[[:space:]]*$//')"
+    fi
     printf '%s;%s;%s;;%s;;;1;0;joy1way;good;1;;;;;;0;;0;0;1\n' "$NOM_BASE" "$TITRE" "$SYSTEME" "$ANNEE" >> "$OUTPUT_FILE"
 done
 

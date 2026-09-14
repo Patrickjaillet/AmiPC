@@ -140,3 +140,68 @@ Out Run (1988)(U.S. Gold)[cr Defjam - CCS][t +4 Defjam];Out Run;amiga500;;1988;;
 Out Run Europa (1991)(U.S. Gold);Out Run Europa;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
 Outlands (1989)(Pandora)[cr SCX];Outlands;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
 Outzone (1991)(Lankhor)[cr SR][t +3 Supplex];Outzone;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+P.O.W. v1.0 (Actionware);P.O.W. v1.0;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Paladin II (Impressions)(M3);Paladin II;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Pang (Ocean)(PAL);Pang;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Panza Kick Boxing (Futura)(FR);Panza Kick Boxing;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Paperboy (Elite);Paperboy;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Paperboy 2 (Mindscape);Paperboy 2;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Parasol Stars - Rainbow Islands 2 (Ocean);Parasol Stars - Rainbow Islands 2;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Pegasus (Gremlin);Pegasus;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Phalanx (Anco);Phalanx;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Phalanx II - The Return (Kingsoft);Phalanx II - The Return;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Pinball Dreams (21st Century);Pinball Dreams;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Pinball Fantasies (21st Century);Pinball Fantasies;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Portes du Temps, Les (Legend)(FR);Portes du Temps, Les;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Prehistorik (Titus);Prehistorik;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Prince of Persia v1.0 (Domark)(GB);Prince of Persia v1.0;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Quete de l'Oiseau du Temps, La (Infogrames)(FR);Quete de l'Oiseau du Temps, La;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Qwak (Team 17);Qwak;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+R-Type (Electric Dreams);R-Type;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+R-Type II (Activision);R-Type II;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Rainbow Islands - The Story of Bubble Bobble 2 (Ocean);Rainbow Islands - The Story of Bubble Bobble 2;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Rampage (Activision);Rampage;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Real Ghostbusters, The (Activision);Real Ghostbusters, The;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Renegade (Imagine);Renegade;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Rick Dangerous (Firebird);Rick Dangerous;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Rick Dangerous 2 (MicroStyle);Rick Dangerous 2;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Risky Woods (Dinamic)(beta);Risky Woods;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Robin Hood - Legend Quest (Codemasters);Robin Hood - Legend Quest;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Rolling Thunder (U.S. Gold);Rolling Thunder;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+SWIV v1.0 (1991-02-28)(Storm);SWIV v1.0;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Saint Dragon (Storm);Saint Dragon;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Samurai - The Way of the Warrior (Impressions)(M5);Samurai - The Way of the Warrior;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Second Samurai (Psygnosis);Second Samurai;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Secret of Monkey Island, The v1.0 (1991-04-26)(Ubi Soft)(FR);Secret of Monkey Island, The v1.0;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Shadow Dancer (U.S. Gold);Shadow Dancer;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Shadow of the Beast (Psygnosis);Shadow of the Beast;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Shadow of the Beast II (Psygnosis);Shadow of the Beast II;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Shadow of the Beast III (Psygnosis);Shadow of the Beast III;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Shinobi (Virgin);Shinobi;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+ShockWave (Digital Magic);ShockWave;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Shufflepuck Cafe v1.0 (Broderbund France)(FR);Shufflepuck Cafe v1.0;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Silkworm (Virgin);Silkworm;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Simon the Sorcerer (Adventure Soft)(FR);Simon the Sorcerer;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Speedball 2 - Brutal Deluxe v1.00 (1991-01-07)(Image Works);Speedball 2 - Brutal Deluxe v1.00;amiga500;;1991;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Stormlord (Hewson);Stormlord;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Street Fighter (GO!);Street Fighter;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Super Cauldron (Titus);Super Cauldron;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Super Wonderboy in Monsterland (Activision);Super Wonderboy in Monsterland;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Switchblade (Gremlin);Switchblade;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Switchblade II (Gremlin);Switchblade II;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Toki (Ocean);Toki;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Turrican (Rainbow Arts);Turrican;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Turrican 3 (Renegade);Turrican 3;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Turrican II - The Final Fight (Rainbow Arts);Turrican II - The Final Fight;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+TwinWorld - Land of Vision v1.0 (1989-10-22)(Ubi Soft);TwinWorld - Land of Vision v1.0;amiga500;;1989;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Unreal (Ubi Soft);Unreal;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Utopia - The Creation of a Nation (Gremlin)(M4);Utopia - The Creation of a Nation;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Voyage au Centre de la Terre (Chip)(FR);Voyage au Centre de la Terre;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Voyageurs du Temps, Les - La Menace v1.04 (Delphine)(FR);Voyageurs du Temps, Les - La Menace v1.04;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Ween - The Prophecy v1.2 (Coktel Vision)(FR);Ween - The Prophecy v1.2;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Weird Dreams (Rainbird);Weird Dreams;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Who Framed Roger Rabbit v1.1 (Buena Vista);Who Framed Roger Rabbit v1.1;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Wings - 512k Only (Cinemaware);Wings - 512k Only;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Wings of Death (Thalion);Wings of Death;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Xenon 2 - Megablast (Image Works);Xenon 2 - Megablast;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Zak McKracken and the Alien Mindbenders (Lucasfilm)(FR);Zak McKracken and the Alien Mindbenders;amiga500;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1

@@ -25,9 +25,15 @@ Le romlist Amiga 500 est généré automatiquement à partir du contenu réel de
 sh scripts/generer_romlist.sh
 ```
 
-Résultat : `config/attract/romlists/amiga500.txt`, au format standard AttractMode (`#Name;Title;Emulator;...`), avec extraction automatique du titre et de l'année depuis le nom de fichier. 141 jeux générés lors de la dernière exécution.
+Résultat : `config/attract/romlists/amiga500.txt`, au format standard AttractMode (`#Name;Title;Emulator;...`), avec extraction automatique du titre et de l'année depuis le nom de fichier. 206 jeux générés lors de la dernière exécution.
 
-Le romlist Amiga 1200 (`amiga1200.txt`) est initialisé vide, prêt à être peuplé lors de l'ajout de jeux dans un futur répertoire `roms/amiga1200/` (cf. section 7 du ROADMAP).
+Le romlist Amiga 1200 (`config/attract/romlists/amiga1200.txt`) est généré de la même façon à partir de `roms/amiga1200/` via :
+
+```sh
+sh scripts/generer_romlist.sh amiga1200
+```
+
+Les jeux Amiga 1200 suivent la convention de nommage No-Intro (`Titre (Région) (Tags)`, sans année) : le script détecte l'absence d'année et retire alors les groupes entre parenthèses/crochets pour ne conserver que le titre. 89 jeux (AGA) générés lors de la dernière exécution.
 
 ## 4. Scraping et Métadonnées
 

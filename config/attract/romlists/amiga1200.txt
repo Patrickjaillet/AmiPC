@@ -1,1 +1,90 @@
 #Name;Title;Emulator;CloneOf;Year;Manufacturer;Category;Players;Rotation;Control;Status;DisplayCount;DisplayType;AltRomname;AltTitle;Extra;Buttons;Favourite;Tags;PlayedCount;PlayedTime;FileIsAvailable
+Aladdin (Europe) (AGA);Aladdin;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Alien Breed 3D (Europe) (AGA);Alien Breed 3D;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+All New World of Lemmings (Europe) (AGA);All New World of Lemmings;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Banshee (Europe) (En,Fr,De,Da) (AGA);Banshee;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Body Blows (Europe) (AGA);Body Blows;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Body Blows Galactic (Europe) (AGA);Body Blows Galactic;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Breathless (Europe) (AGA);Breathless;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Brian the Lion (Europe) (En,Fr,De,It) (AGA);Brian the Lion;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Brutal Football - Deluxe Edition (Europe) (AGA);Brutal Football - Deluxe Edition;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Bubble and Squeak (Europe) (AGA);Bubble and Squeak;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Burning Rubber (Europe) (AGA);Burning Rubber;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Burntime (Europe) (AGA);Burntime;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Capital Punishment (Europe) (En,De) (AGA);Capital Punishment;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Chaos Engine 2, The (Europe) (AGA);Chaos Engine 2, The;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Chaos Engine, The (Europe) (AGA);Chaos Engine, The;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Civilization (Europe) (v855e.01) (AGA);Civilization;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Clockwiser (Europe) (AGA);Clockwiser;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Coala (Europe) (ECS, AGA);Coala;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+D-Generation (Europe) (AGA);D-Generation;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Dangerous Streets (Europe) (AGA);Dangerous Streets;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Dennis (Europe) (AGA);Dennis;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Diggers (Europe) (En,Fr,De,It) (AGA);Diggers;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Donk! - The Samurai Duck! (Europe) (OCS, AGA);Donk! - The Samurai Duck!;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+DreamWeb (Europe) (AGA);DreamWeb;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Exile (Europe) (En,Fr,De) (AGA);Exile;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Fatman - The Caped Consumer (Europe) (AGA);Fatman - The Caped Consumer;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Fears (Europe) (AGA);Fears;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Football Glory (Europe) (AGA);Football Glory;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Gloom (Europe) (AGA);Gloom;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Guardian (Europe) (AGA);Guardian;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Gunship 2000 (Europe) (AGA);Gunship 2000;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Heimdall 2 (Europe) (En,Fr,De,It) (AGA);Heimdall 2;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+High Seas Trader (Europe) (AGA);High Seas Trader;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Humans III - Evolution - Lost in Time (Europe) (AGA);Humans III - Evolution - Lost in Time;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Impossible Mission 2025 - The Special Edition (Europe) (En,Fr,De,Es,It) (AGA);Impossible Mission 2025 - The Special Edition;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Ishar 2 - Messengers of Doom (Europe) (En,Fr,De) (AGA);Ishar 2 - Messengers of Doom;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Ishar 3 - The Seven Gates of Infinity (Europe) (En,Fr,De) (AGA);Ishar 3 - The Seven Gates of Infinity;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+James Pond 3 - Operation Starfish (Europe) (AGA);James Pond 3 - Operation Starfish;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+James Pond II - Codename RoboCod (Europe) (AGA);James Pond II - Codename RoboCod;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Jungle Strike (Europe) (AGA);Jungle Strike;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Jurassic Park (Europe) (En,Fr,De,Es,It) (AGA);Jurassic Park;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Kick Off 2 (Europe) (AGA) (Bundled with v1.4e);Kick Off 2;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Kick Off 3 (Europe) (AGA);Kick Off 3;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Kick Off 3 - European Challenge (Europe) (En,Fr,De,Es,It) (AGA);Kick Off 3 - European Challenge;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Killing Grounds, The - Alien Breed 3D 2 (Europe) (AGA);Killing Grounds, The - Alien Breed 3D 2;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Legends (Europe) (En,Fr,De) (AGA);Legends;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Lion King, The (Europe) (AGA);Lion King, The;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Lords of the Realm (France) (AGA);Lords of the Realm;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Marvin's Marvellous Adventure (Europe) (En,Fr,De,It) (AGA);Marvin's Marvellous Adventure;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Morph (Europe) (AGA);Morph;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Naughty Ones (Europe) (AGA);Naughty Ones;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Oscar (Europe) (AGA) (Amiga 1200 Bundle - Desktop Dynamite);Oscar;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Overkill (Europe) (AGA);Overkill;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Pinball Fantasies (USA) (AGA);Pinball Fantasies;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Pinball Illusions (Europe) (AGA);Pinball Illusions;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Pinball Mania (Europe) (AGA);Pinball Mania;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Pinball Prelude (Europe) (AGA);Pinball Prelude;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Rally Championships (Europe) (En,Fr,De,Es,It,Nl,Pt,Pl) (AGA);Rally Championships;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Rise of the Robots (Europe) (AGA);Rise of the Robots;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Roadkill (Europe) (AGA);Roadkill;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Robinson's Requiem (Europe) (En,Fr,De) (AGA);Robinson's Requiem;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Sabre Team (Europe) (En,Fr,De,Es,It) (AGA);Sabre Team;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Second Samurai (Europe) (AGA);Second Samurai;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Shadow Fighter (Europe) (AGA);Shadow Fighter;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Shaq-Fu (Europe) (AGA);Shaq-Fu;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Sixth Sense Investigations (Europe) (AGA);Sixth Sense Investigations;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Skeleton Krew (Europe) (AGA);Skeleton Krew;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Slamtilt (Europe) (AGA);Slamtilt;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Sleepwalker (Europe) (AGA);Sleepwalker;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Speris Legacy, The (Europe) (AGA);Speris Legacy, The;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Star Crusader (Europe) (AGA);Star Crusader;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Star Trek - 25th Anniversary (Europe) (AGA);Star Trek - 25th Anniversary;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Street Racer (Europe) (AGA);Street Racer;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Subwar 2050 (Europe) (En,Fr,De,It) (AGA);Subwar 2050;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Super Stardust (Europe) (AGA);Super Stardust;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Super Street Fighter II - The New Challengers (Europe) (AGA);Super Street Fighter II - The New Challengers;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Super Street Fighter II Turbo (Europe) (AGA);Super Street Fighter II Turbo;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Surf Ninjas (Europe) (AGA);Surf Ninjas;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Testament (Europe) (AGA);Testament;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Top Gear 2 (Europe) (AGA);Top Gear 2;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Total Carnage (Europe) (AGA);Total Carnage;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Tower of Souls (Europe) (AGA);Tower of Souls;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Trolls (Europe) (AGA);Trolls;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+UFO - Enemy Unknown (Europe) (En,Fr,De) (AGA);UFO - Enemy Unknown;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Virocop (Europe) (AGA);Virocop;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Virtual Karting (Europe) (AGA);Virtual Karting;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Watchtower (Europe) (AGA);Watchtower;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Whizz (Europe) (AGA);Whizz;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1
+Worms - The Director's Cut (Europe) (AGA);Worms - The Director's Cut;amiga1200;;;;;1;0;joy1way;good;1;;;;;;0;;0;0;1

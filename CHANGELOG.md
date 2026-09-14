@@ -6,6 +6,18 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.25] - 2026-09-15
+
+### Ajouté
+
+- 89 jeux Amiga 1200 (AGA) ajoutés à `roms/amiga1200/` (précédemment vide), portant le total à 206 jeux Amiga 500 + 89 jeux Amiga 1200.
+- Romlist `config/attract/romlists/amiga1200.txt` généré (89 entrées) via `scripts/generer_romlist.sh amiga1200`.
+- Sommes de contrôle SHA-256 régénérées pour les deux répertoires (`docs/roms-amiga500.sha256`, `docs/roms-amiga1200.sha256`).
+
+### Modifié
+
+- `scripts/generer_romlist.sh` : détection de l'absence d'année dans le nom de fichier (convention de nommage No-Intro utilisée par les jeux Amiga 1200, `Titre (Région) (Tags)`) et suppression des groupes parenthésés/crochetés associés pour produire un titre propre, sans modifier le comportement existant pour les noms au format `Titre (Année)(Éditeur)`.
+
 ## [0.10.24] - 2026-09-15
 
 ### Corrigé
