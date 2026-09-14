@@ -6,6 +6,14 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.16] - 2026-09-14
+
+### Corrigé
+
+- **Étape majeure** : le paquet Buildroot `attractmode` compile, lie (`Creating executable: attract`) et s'installe désormais intégralement (`>>> attractmode v2.6.1 Installing to target`) — validant les quinze corrections précédentes de cette session (toolchain, Kconfig, SFML, AttractMode, GCC, linker, X11, Mesa). Le build échouait ensuite sur `target-finalize` avec `post-build.sh: Permission denied` (`Error 126`).
+- Cause : l'ensemble des scripts shell du dépôt (`post-build.sh`, `post-image.sh`, tous les scripts du paquet `amipc-init`, tous les scripts sous `scripts/`) étaient enregistrés dans Git en mode `100644` (non exécutable) au lieu de `100755`, malgré des `chmod +x` exécutés localement à leur création — ceux-ci ne s'étaient jamais reflétés dans l'index Git, l'environnement de développement (Windows/Git Bash) ne préservant pas toujours fidèlement les permissions Unix lors des `git add` successifs.
+- Correction du mode exécutable de tous les scripts concernés directement dans l'index Git (`git update-index --chmod=+x`), sans modification de leur contenu.
+
 ## [0.10.15] - 2026-09-14
 
 ### Corrigé
