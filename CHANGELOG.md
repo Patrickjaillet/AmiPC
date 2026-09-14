@@ -6,6 +6,12 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.21] - 2026-09-15
+
+### Modifié
+
+- Mise à jour du ROADMAP.md pour refléter le premier succès complet de compilation (release v0.10.19) : cases cochées pour la compilation effective du core libretro-uae, la compilation/liaison/installation d'AttractMode, et la publication réelle d'une release GitHub avec image téléchargeable (`amipc.img`, ~1,53 Go).
+
 ## [0.10.20] - 2026-09-15
 
 ### Ajouté
