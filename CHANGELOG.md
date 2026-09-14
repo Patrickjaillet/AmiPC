@@ -6,6 +6,13 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.17] - 2026-09-14
+
+### Corrigé
+
+- Construction de l'image finale : `post-build.sh` s'exécute désormais sans erreur de permission (validant le seizième correctif) et le rootfs cible complet est empaqueté avec succès (`rootfs.tar` généré via `fakeroot`). Le build échouait ensuite sur `target-post-image` avec `genimage: command not found` (`Error 127`) — l'outil `genimage`, utilisé par `post-image.sh` (`buildroot-external/board/amipc/post-image.sh`) pour assembler l'image disque finale à partir de `genimage.cfg`, n'était jamais construit par Buildroot ni disponible sur l'hôte de build.
+- Ajout de `BR2_PACKAGE_HOST_GENIMAGE=y` au defconfig, qui compile `genimage` comme outil hôte Buildroot standard (placé automatiquement dans le `PATH` utilisé par `support/scripts/genimage.sh`).
+
 ## [0.10.16] - 2026-09-14
 
 ### Corrigé
