@@ -5,7 +5,7 @@ ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 VERSION="$(cat "${ROOT_DIR}/VERSION" | tr -d '[:space:]')"
 NOM_ARCHIVE="amipc-personnel-v${VERSION}.tar.gz"
 DEST_DIR="${ROOT_DIR}/build/release-personnelle"
-IMAGE_TROUVEE="$(find "${ROOT_DIR}/build" -maxdepth 3 -name amipc.img 2>/dev/null | head -n1 || true)"
+IMAGE_TROUVEE="$(find "${ROOT_DIR}/build" -maxdepth 4 -name amipc.img 2>/dev/null | head -n1 || true)"
 
 echo "Preparation de la release personnelle AmiPC v${VERSION}."
 echo "ATTENTION : cette archive contient les BIOS et les jeux presents dans bios/ et roms/."

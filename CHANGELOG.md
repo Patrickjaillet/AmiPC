@@ -6,6 +6,16 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.24] - 2026-09-15
+
+### Corrigé
+
+- `scripts/empaqueter_release_personnelle.sh` : la recherche de `amipc.img` était limitée à `-maxdepth 3`, alors que le chemin de sortie réel de Buildroot (`build/buildroot-<version>/output/images/amipc.img`, tel que documenté dans `COMPILATION.md`) se situe à quatre niveaux de profondeur. Le script échouait donc systématiquement après une compilation réelle. Corrigé à `-maxdepth 4`.
+
+### Validé
+
+- Génération réussie de la release personnelle complète (image + BIOS + ROMs) à partir de l'image `amipc.img` de la release publique v0.10.19, confirmant le bon fonctionnement du script une fois le correctif appliqué.
+
 ## [0.10.23] - 2026-09-15
 
 ### Ajouté
