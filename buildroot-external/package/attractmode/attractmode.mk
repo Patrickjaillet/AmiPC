@@ -8,8 +8,15 @@ define ATTRACTMODE_BUILD_CMDS
 	PKG_CONFIG_PATH="$(STAGING_DIR)/usr/lib/pkgconfig:$(STAGING_DIR)/usr/share/pkgconfig" \
 	PKG_CONFIG_LIBDIR="$(STAGING_DIR)/usr/lib/pkgconfig:$(STAGING_DIR)/usr/share/pkgconfig" \
 	PKG_CONFIG_SYSROOT_DIR="$(STAGING_DIR)" \
-	$(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D) \
-		CC="$(TARGET_CC)" CXX="$(TARGET_CXX)" \
+	$(MAKE) -C $(@D) \
+		PATH="$(BR_PATH)" \
+		AR="$(TARGET_AR)" \
+		AS="$(TARGET_AS)" \
+		LD="$(TARGET_LD)" \
+		CC="$(TARGET_CC)" \
+		CXX="$(TARGET_CXX)" \
+		RANLIB="$(TARGET_RANLIB)" \
+		STRIP="$(TARGET_STRIP)" \
 		PKG_CONFIG="$(PKG_CONFIG_HOST_BINARY)" \
 		STATIC=0
 endef

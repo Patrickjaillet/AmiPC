@@ -6,6 +6,13 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.6] - 2026-09-14
+
+### Corrigé
+
+- Compilation du paquet Buildroot `attractmode` : le patch SFML/DRM (section précédente) est validé — SFML compile désormais intégralement sans rechercher X11/OpenGL desktop. La compilation d'AttractMode échouait cependant toujours ensuite sur `squirrel.h`, `libavutil/log.h`, `nowide/cstdio.hpp` introuvables. Cause racine identifiée : `attractmode.mk` invoquait `$(MAKE) $(TARGET_CONFIGURE_OPTS) ...`, or cette macro standard Buildroot définit `CPPFLAGS="$(TARGET_CPPFLAGS)"` sur la ligne de commande — en GNU Make, une variable définie en ligne de commande a priorité absolue sur toute réaffectation `+=` ultérieure dans le Makefile, ce qui annulait silencieusement tous les `CPPFLAGS += -I$(EXTLIBS_DIR)/...` (squirrel, nowide, FFmpeg, etc.) que le Makefile amont d'AttractMode ajoute normalement lui-même selon les bibliothèques détectées via pkg-config.
+- `attractmode.mk` reconstruit pour ne transmettre explicitement que les variables d'outils du toolchain croisé (`PATH`, `AR`, `AS`, `LD`, `CC`, `CXX`, `RANLIB`, `STRIP`, `PKG_CONFIG`), sans jamais fixer `CPPFLAGS`/`CFLAGS`/`CXXFLAGS` en ligne de commande, laissant le Makefile amont gérer entièrement ses propres chemins d'inclusion et flags de compilation additifs.
+
 ## [0.10.5] - 2026-09-14
 
 ### Corrigé
