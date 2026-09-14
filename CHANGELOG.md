@@ -6,6 +6,13 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.15] - 2026-09-14
+
+### Corrigé
+
+- Compilation du paquet Buildroot `attractmode` : le patch `0002-link-explicitly-against-shared-glapi.patch` (v0.10.14) échouait à s'appliquer (`Hunk #1 FAILED`), car il avait été construit à partir d'une copie du Makefile récupérée sans préciser la référence exacte du tag `v2.6.1` (probablement `master`, dont la numérotation de lignes diffère). Cause racine du problème de lien également mal diagnostiquée jusqu'ici : la liaison OpenGL (`-lGL`/`GLES_LIB`) dans le vrai Makefile du tag `v2.6.1` est imbriquée dans le même bloc conditionnel que le module `gameswf` (`ifneq ($(NO_SWF),1)`) — en désactivant `NO_SWF=1` (nécessaire, `gameswf` ne compile pas avec GCC 12), toute liaison OpenGL disparaissait purement et simplement du binaire final, expliquant l'échec systématique de résolution de `glGetString` observé sur plusieurs itérations, indépendamment du choix GL/GLES ou de `libglapi`.
+- Patch régénéré et testé de bout en bout (extraction du vrai tarball `v2.6.1`, application séquentielle des deux patches comme le fait Buildroot) : ajoute une branche `else` au bloc `NO_SWF` fournissant la liaison `-ldl -lGL -lglapi` (toujours nécessaire pour `shared-glapi`, cf. section précédente) lorsque SWF est désactivé, sans modifier le comportement existant lorsque SWF reste actif.
+
 ## [0.10.14] - 2026-09-14
 
 ### Corrigé

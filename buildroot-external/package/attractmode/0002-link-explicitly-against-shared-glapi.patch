@@ -1,24 +1,39 @@
-Mesa3D est construit par Buildroot avec shared-glapi active (option
-meson -Dshared-glapi=enabled), ce qui deplace les symboles OpenGL
-reels tels que glGetString() dans une bibliotheque separee
-libglapi.so plutot que dans libGL.so elle-meme (qui ne contient que
-le dispatch GLX). Sans liaison explicite a cette bibliotheque, l'
-edition de liens de l'executable attract echoue avec "undefined
-reference to glGetString", le linker GNU moderne (--as-needed par
-defaut) ne resolvant pas systematiquement cette dependance transitive
-au travers de la seule liaison a libGL.
+Dans le Makefile amont d'AttractMode, la liaison a OpenGL (-lGL ou
+GLES_LIB selon USE_GLES) est imbriquee dans le meme bloc conditionnel
+que le module gameswf (SWF), sous "ifneq ($(NO_SWF),1)". Ce module
+gameswf contient du code C++ incompatible avec les regles d'acces
+strictement appliquees par GCC 12 (cf. patch NO_SWF applique separement
+via le paquet), et doit donc rester desactive (NO_SWF=1). Or cela
+supprime egalement toute liaison OpenGL, provoquant un "undefined
+reference to glGetString" a l'edition de liens meme lorsque GL/gl.h
+est correctement present et que tout le code source compile.
 
-Ce correctif ajoute -lglapi immediatement apres -lGL dans le cas
-OpenGL desktop, sans modifier le cas GLES (deja gere separement) ni
-les autres plateformes.
+Par ailleurs, Mesa3D est construit par Buildroot avec shared-glapi
+active (option meson -Dshared-glapi=enabled), ce qui deplace les
+symboles OpenGL reels tels que glGetString() dans une bibliotheque
+separee libglapi.so plutot que dans libGL.so elle-meme (qui ne
+contient que le dispatch GLX). La liaison doit donc inclure -lglapi
+en plus de -lGL.
+
+Ce correctif ajoute une branche "else" fournissant la liaison OpenGL
+necessaire lorsque NO_SWF est actif, sans modifier le comportement
+existant lorsque NO_SWF est inactif (SWF+GL restent lies ensemble
+comme avant). Teste avec succes en application sequentielle apres le
+patch 0001 (offsets differents, zones non chevauchantes).
 
 --- a/Makefile
 +++ b/Makefile
-@@ -353,6 +353,7 @@
-    LIBS += $(GLES_LIB)
-   else
-    LIBS += -lGL
-+   LIBS += -lglapi
-   endif
+@@ -249,6 +249,13 @@
+   TEMP_LIBS += freetype2
   endif
+
++else
++ ifeq ($(USE_GLES),1)
++  GLES_LIB ?= -lGLESv1_CM
++  LIBS += -ldl $(GLES_LIB)
++ else
++  LIBS += -ldl -lGL -lglapi
++ endif
  endif
+
+ ifeq ($(FE_WINDOWS_COMPILE),1)
