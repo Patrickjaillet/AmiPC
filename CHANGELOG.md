@@ -6,6 +6,13 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.4] - 2026-09-14
+
+### Corrigé
+
+- Compilation du paquet Buildroot `sfml` : le backend DRM se configure désormais correctement (`SFML_USE_DRM=TRUE` validé, libdrm trouvé, X11 n'est plus recherché), mais la détection GBM échouait ensuite avec `Could NOT find GBM`. Cause : `BR2_PACKAGE_MESA3D_GBM` est une option Kconfig `depends on` (jamais activée automatiquement par un simple pilote Gallium ou par `MESA3D_OPENGL_EGL`, contrairement à ce que documentait le commentaire Kconfig amont), et n'était donc jamais réellement activée malgré la présence d'un pilote Gallium compatible (`IRIS`).
+- Ajout explicite de `BR2_PACKAGE_MESA3D_GBM=y` au defconfig et en `select` dans le paquet `sfml` (`Config.in`), garantissant que `libgbm.so`/`gbm.h` sont bien construits et présents dans le sysroot cible.
+
 ## [0.10.3] - 2026-09-14
 
 ### Corrigé
