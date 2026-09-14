@@ -6,6 +6,13 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
+## [0.10.10] - 2026-09-14
+
+### Corrigé
+
+- Compilation du paquet Buildroot `attractmode` : plus aucune erreur `GL/gl.h`, `squirrel.h` ni `libavutil` (patch `SFML_OPENGL_ES` validé). Dernier échec restant sur `src/swf.cpp` : le module interne `gameswf` (support Flash SWF, embarqué en sources dans `extlibs/gameswf/`) contient du code C++ ancien incompatible avec les règles d'accès strictement appliquées par GCC 12 (`array<as_value>::array` hérité en `private` mais utilisé comme s'il était accessible). Ce module gère un usage non nécessaire à AmiPC (animations Flash dans les thèmes du frontend).
+- Ajout de `NO_SWF=1` à l'invocation `make` du paquet `attractmode` (déjà actif par défaut sous FreeBSD dans le Makefile amont, mais pas sous Linux), désactivant proprement la compilation du module `gameswf` plutôt que de tenter de corriger du code tiers obsolète.
+
 ## [0.10.9] - 2026-09-14
 
 ### Corrigé
