@@ -1,0 +1,12 @@
+--- a/lib/ext2fs/tdb.c
++++ b/lib/ext2fs/tdb.c
+@@ -110,7 +110,9 @@
+ #endif
+ #endif
+ 
++#if !defined(__cplusplus) && !(defined(__STDC_VERSION__) && __STDC_VERSION__ >= 202311L) && !defined(__bool_true_false_are_defined)
+ typedef int bool;
++#endif
+ 
+ #include "tdb.h"
+ 

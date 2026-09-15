@@ -6,7 +6,24 @@ Le format suit les recommandations de [Keep a Changelog](https://keepachangelog.
 
 ## [Non publié]
 
-## [0.10.25] - 2026-09-15
+## [0.10.26] - 2026-09-15
+
+### Corrigé
+
+Cinq incompatibilités réelles entre les outils hôtes de Buildroot et GCC 15.2 (compilateur très récent, bien plus strict que les versions ciblées historiquement par ces paquets), découvertes lors d'une compilation locale complète sous WSL2 Ubuntu, corrigées via `BR2_GLOBAL_PATCH_DIR` (`buildroot-external/patches/`) :
+
+- **host-cmake 3.28.3** : l'utilitaire `cmcppdap` embarqué n'incluait pas `<cstdint>`, provoquant `error: 'uint32_t' has not been declared`. Corrigé par l'ajout de l'en-tête manquant.
+- **host-m4 1.4.19** : le `gnulib` embarqué utilisait la syntaxe d'attribut C23 `[[__nodiscard__]]` dans une position que GCC 15 rejette. Corrigé en supprimant la branche C23, l'attribut retombant systématiquement sur `__attribute__((__warn_unused_result__))`.
+- **host-gawk 5.3.0** : `io.c` effectuait un cast de pointeur de fonction non prototypé (`ssize_t(*)()`) vers `read_func`, désormais une erreur stricte sous GCC 15 au lieu d'un avertissement. Corrigé en utilisant le prototype exact (`ssize_t(*)(int, void *, size_t)`).
+- **host-gmp 6.3.0** : le script `configure` embarque un programme de test C historique (« long long reliability test 1 ») avec une fonction non prototypée appelée avec 6 arguments ; GCC 15 le rejette, et la logique de `configure` en conclut à tort qu'aucun compilateur fonctionnel n'existe pour aucune ABI. Corrigé en donnant à la fonction de test un prototype réel correspondant à ses arguments.
+- **host-e2fsprogs 1.47.0** : `lib/ext2fs/tdb.c` définissait `typedef int bool;`, illégal sous le mode C23 par défaut de GCC 15 (`bool` y est un mot-clé réservé). Corrigé en conditionnant ce typedef à l'absence de C23/`__bool_true_false_are_defined`.
+
+Chaque correctif a été vérifié par `patch -p1 --dry-run` contre les sources réellement extraites avant application, et généré mécaniquement par comparaison de fichiers réels plutôt que par des numéros de ligne devinés.
+
+### Validé
+
+- Première compilation locale complète et réussie de l'image AmiPC directement sur la machine de l'utilisateur, via WSL2 (Ubuntu), indépendamment du pipeline GitHub Actions : image `amipc.img` (1,6 Go) générée avec succès dans un environnement de compilation entièrement local, distinct de la release publique v0.10.19 construite en intégration continue.
+- Démarrage de l'image lancé sous QEMU (émulation logicielle uniquement, l'accélération KVM n'étant pas exposée dans cette instance WSL2) avec affichage graphique réel via WSLg ; validation complète du démarrage jusqu'à AttractMode en cours.
 
 ### Ajouté
 

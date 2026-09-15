@@ -1,0 +1,13 @@
+--- a/lib/config.hin
++++ b/lib/config.hin
+@@ -2585,9 +2585,7 @@
+ # define _GL_ATTRIBUTE_MALLOC
+ #endif
+
+-#if 201710L < __STDC_VERSION__
+-# define _GL_ATTRIBUTE_NODISCARD [[__nodiscard__]]
+-#elif _GL_HAS_ATTRIBUTE (warn_unused_result)
++#if _GL_HAS_ATTRIBUTE (warn_unused_result)
+ # define _GL_ATTRIBUTE_NODISCARD __attribute__ ((__warn_unused_result__))
+ #else
+ # define _GL_ATTRIBUTE_NODISCARD

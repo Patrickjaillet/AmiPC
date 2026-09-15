@@ -64,6 +64,12 @@ build/buildroot-<version>/output/images/
 
 ---
 
+## Compatibilité avec des Compilateurs Hôtes Récents (GCC 15+)
+
+Certains outils hôtes construits par Buildroot (`host-cmake`, `host-m4`, `host-gawk`, `host-gmp`, `host-e2fsprogs`) embarquent du code C/C++ ancien qui suppose un compilateur pré-C23 (typedefs de `bool`, casts de pointeurs de fonction non prototypés, attributs `[[nodiscard]]` mal placés). Sur un hôte doté d'un compilateur GCC très récent (15 ou supérieur, dont le standard par défaut est C23), ces suppositions ne tiennent plus et la compilation de ces outils hôtes échoue.
+
+Le defconfig active `BR2_GLOBAL_PATCH_DIR="$(BR2_EXTERNAL_AMIPC_PATH)/patches"`, qui applique automatiquement des correctifs ciblés (un répertoire par paquet et version, cf. `buildroot-external/patches/`) à ces cinq paquets avant leur compilation, sans modifier les paquets Buildroot eux-mêmes. Ce mécanisme a été validé lors d'une compilation locale complète sous GCC 15.2 (WSL2 Ubuntu) ; il est sans effet sur un hôte doté d'un compilateur plus ancien (les correctifs restent compatibles et inoffensifs).
+
 ## Accélération des Compilations Répétées (ccache)
 
 Le defconfig active `BR2_CCACHE`, qui compile et utilise automatiquement `ccache` (stocké par défaut dans `$HOME/.buildroot-ccache`) pour éviter de recompiler des fichiers sources inchangés d'une exécution à l'autre. Le gain n'apparaît qu'à partir du **deuxième** build (le premier doit construire `host-ccache` lui-même avant de pouvoir s'en servir).
